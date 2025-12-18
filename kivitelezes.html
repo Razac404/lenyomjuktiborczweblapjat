@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ST-Managment</title>
+	<style>
+	
+		*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		
+		}
+		
+		html{
+			font-family: Bell MT;
+		}
+		
+		
+		h1{
+			font-size:2rem;
+		}
+		
+		#fomenu{
+			height: 120px;
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
+			position: fixed;
+			z-index:1000;
+			background-color: white;
+			/*box-shadow: 0 0 20px #0047AB inset;*/
+			
+		}
+		
+		#almenu{
+			height: 100px;
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
+			position: fixed;
+			z-index:999;
+			top: 120px;
+			background:
+				radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%),
+				linear-gradient(180deg, #06160d 0%, #0b2a16 50%, #06160d 100%);
+			color: white;
+			border-bottom: solid white;
+		}
+		
+		#ign_kezeles{
+			background:
+				radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%),
+				linear-gradient(180deg, #06160d 0%, #0b2a16 50%, #06160d 100%);
+			color: white;
+		}
+		
+		
+		#ign_kezeles,#ign_kivitelezes {
+			transition: color 0.5s ease;
+		}
+		#logo{
+			margin-left: -40px;
+		}
+		
+		#logo img {
+			max-height: 100px;
+			width: auto;
+		}
+		
+		#cegnev{
+			font-size: 3rem;
+			Bell MT;
+			font-weight: 500;
+			font-stretch: 150%;
+			
+		}
+		
+		#toltes_fomenu1{
+			height: 100%;
+			width: 30px;
+		}
+		
+		#toltes_fomenu2{
+			height: 100%;
+			width: 15px;
+		}
+		
+		.menupont{
+			height: 55px; 
+			width: 155px;
+			font-size: 1.4rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			color:gray;
+			border-radius: 20px;
+			transition: color 0.6s ease-in-out;
+		}
+		
+		#o_betu{
+			font-family: 'Gilda Display';
+			font-size:1.29rem;
+		}
+		
+		.menupont:hover{
+			border-radius: 20px;
+		}
+		
+		.al_menupont{
+			height: 55px; 
+			width: content-fit;
+			padding: 5px 8px;
+			font-size: 1.2rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			border-radius: 20px;
+			transition: color 0.6s ease-in-out;
+		}
+		
+		.al_menupont:hover{
+			border-top: solid white;
+			border-bottom: solid white;
+		}
+		#nyelv {
+			width: 55px;
+			height: 40px; /* set this to match width */
+			padding: 0;
+			border: 1px solid;
+			background-image: url('british_flag.png');
+			background-size: 150% 220%; /* or 200%, or any value > 100% */
+			background-position: center;
+			border-radius: 40%;
+			overflow: hidden; /* clips the excess */
+		}
+		
+		
+		
+		.oldal{
+			height: calc(85vh - 220px);
+			overflow: hidden; /* hogy semmi ne lógjon túl */
+			
+			z-index:1;
+		}
+		
+		#tura_old{
+			height:85vh;
+		}
+	
+		.feher{
+			
+			display: grid;
+			grid-template-columns: 40% 60%;
+			grid-template-rows: 100%;
+		}
+		
+		
+
+		.szines{
+			
+			background:
+				radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%),
+				linear-gradient(180deg, #06160d 0%, #0b2a16 50%, #06160d 100%);
+		}
+		
+	
+	</style>
+</head>
+<body>
+	
+	<div id="fomenu"> 
+		<div id="logo"> <img src="logo_black.PNG" alt="egymásra csusztatott lakások"> </div>
+		<div id="cegnev">ST-Managment</div>
+		<div id="toltes_fomenu1"> </div>
+		<div id="fo_oldal" class="menupont" >F<span id="o_betu">ő</span>oldal </div>	
+		<div id="ign_kezeles" class="menupont">Ingatlan kezelés </div>
+		<div id="ign_kivitelezes" class="menupont" >Kivitelezés </div>
+		<div id="ign_okosotthon" class="menupont" >Okosotthon </div>
+		<div id="ign_takaritás" class="menupont" >Takarítás </div>
+		<div id="ign_tanacsadas" class="menupont" >Tanácsadás </div>
+		<div id="toltes_fomenu2"> </div>
+		<div id="nyelv" class="menupont" onclick="window.location.href='index_angol.html'">> </div>
+	</div>
+	
+	<div id="almenu"> 
+		<div id="almenu1" class="al_menupont" >360° virtuális túrák</div>	
+		<div id="almenu2" class="al_menupont">multiplatform</div>
+		<div id="almenu3" class="al_menupont" >vendégkommunikáció </div>
+		<div id="almenu4" class="al_menupont" >ároptimalizálás</div>
+		<div id="almenu5" class="al_menupont" >jogszabályi megfelelés </div>
+		<div id="almenu6" class="al_menupont" >ellenőrzések </div>
+		<div id="almenu7" class="al_menupont" >árajánlat </div>
+		<div id="almenu8" class="al_menupont" >kapcsolat </div>
+		
+	</div>
+	
+	
+	<div id="tura_old" class="oldal feher">
+		LALI
+	</div>
+	
+	
+	<div id="multiplatform_old" class="oldal szines"> 	
+	</div>
+	
+	<div id="vendegkommunikacio_old" class="oldal feher"> 	
+	</div>
+	
+	<div id="aroptimalizálás_old" class="oldal szines"> 	
+	</div>
+	
+	<div id="jogszabalyMegfel_old" class="oldal feher"> 	
+	</div>
+	
+	<div id="ellenorzések_old" class="oldal szines"> 	
+	</div>
+<script>
+		const parok = [
+			{
+			  szolg: "ign_kezeles_szolg_fooldal",
+			  menu: "ign_kezeles",
+			  color: "blue",
+			  background: "radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%), linear-gradient(180deg, #050c1c 0%, #07142b 50%, #050c1c 100%)"
+			},
+			{
+			  szolg: "ign_kivitelezes_szolg_fooldal",
+			  menu: "ign_kivitelezes",
+			  color: "green",
+			  background: "radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%), linear-gradient(180deg, #06160d 0%, #0b2a16 50%, #06160d 100%)"
+			},
+			{
+			  szolg: "ign_okosotthon_szolg_fooldal",
+			  menu: "ign_okosotthon",
+			  color: "darkred",
+			  background: "radial-gradient(90% 70% at 50% 50%, rgba(230, 90, 90, 0.32), transparent 70%), linear-gradient(180deg, #1c0404 0%, #2a0b0b 50%, #1c0404 100%)"
+			},
+			{
+			  szolg: "ign_takaritás_szolg_fooldal",
+			  menu: "ign_takaritás",
+			  color: "deepskyblue",
+			  background: "radial-gradient(95% 75% at 50% 50%, rgba(140, 200, 255, 0.32), transparent 72%), linear-gradient(180deg, #0f2338 0%, deepskyblue 50%, #0b1829 100%)"
+			},
+			{
+			  szolg: "ign_tanacsadas_szolg_fooldal",
+			  menu: "ign_tanacsadas",
+			  color: "gold",
+			  background: "radial-gradient(90% 70% at 50% 50%, rgba(250, 210, 80, 0.32), transparent 70%), linear-gradient(180deg, #4a390e 0%, #5a4310 50%, #4a390e 100%)"
+			}
+		];
+		
+		const reszletekHivat = [
+			"reszletek1","reszletek2", "reszletek3", "reszletek4", "reszletek5"
+		]
+		let aktualisIndex = 0;
+		let intervalId = null;
+		let szunetel = false;
+		let hoverIndex = null;
+
+		window.onload = function () {
+			initHover();
+			inditValtakozas();
+		};
+
+		function resetAll() {
+			parok.forEach(p => {
+			document.getElementById(p.szolg).style.transform = "scale(1)";
+			const menu = document.getElementById(p.menu);
+			const foOld = document.getElementById("fo_oldal");
+			 menu.style.color = "gray";
+			 menu.style.background = "transparent";
+			 foOld.style.color = "black";
+			 foOld.style.fontWeight = "600";
+			});
+		}
+
+		function kiemel(index) {
+			resetAll();
+			const p = parok[index];
+			document.getElementById(p.szolg).style.transform = "scale(1.04)";
+			document.getElementById(p.menu).style.color = p.color;
+		}
+
+		function inditValtakozas() {
+			kiemel(aktualisIndex);
+
+			intervalId = setInterval(() => {
+			if (!szunetel) {
+				aktualisIndex = (aktualisIndex + 1) % parok.length;
+				kiemel(aktualisIndex);
+			}
+			}, 7000);
+		}
+
+		function initHover() {
+			parok.forEach((p, index) => {
+			const menuElem = document.getElementById(p.menu);
+
+			menuElem.addEventListener("mouseenter", () => {
+			szunetel = true;
+			hoverIndex = index;
+			resetAll();
+
+			  
+			menuElem.style.background = p.background;
+			menuElem.style.color = "white";
+			});
+
+			menuElem.addEventListener("mouseleave", () => {
+				szunetel = false;
+
+				aktualisIndex = (hoverIndex + 1) % parok.length;
+				hoverIndex = null;
+
+				resetAll();
+				kiemel(aktualisIndex);
+				});
+			});
+			
+			 reszletekHivat.forEach((reszletekId, index) => {
+				const reszletekElem = document.getElementById(reszletekId);
+				if (reszletekElem) {
+					const p = parok[index]; // Match with corresponding parok item
+					
+					reszletekElem.addEventListener("mouseenter", () => {
+						szunetel = true;
+						hoverIndex = index;
+						resetAll();
+						
+						
+					});
+
+					reszletekElem.addEventListener("mouseleave", () => {
+						szunetel = false;
+						aktualisIndex = (hoverIndex + 1) % parok.length;
+						hoverIndex = null;
+						resetAll();
+						kiemel(aktualisIndex);
+					});
+        }
+    });
+			
+			
+			
+		}
+	
+</script>
+
+</body>
+</html>
+
+
