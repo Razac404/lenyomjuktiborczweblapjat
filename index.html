@@ -32,9 +32,8 @@
 			gap: 20px;
 			position: fixed;
 			z-index:1000;
-			background-color: white;
-			/*box-shadow: 0 0 20px #0047AB inset;*/
 			
+			background: radial-gradient(ellipse at center, #fcfcfc 0%, #e8e8e8 100%);
 		}
 		
 		
@@ -72,14 +71,14 @@
 		
 		.menupont{
 			height: 55px; 
-			width: 155px;
+			width: 158px;
 			font-size: 1.4rem;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			cursor: pointer;
 			color:gray;
-			
+			border-radius: 20px;
 			transition: color 0.6s ease-in-out;
 		}
 		
@@ -98,13 +97,14 @@
 			height: 40px; /* set this to match width */
 			padding: 0;
 			border: 1px solid;
-			background-image: url('british_flag.png');
+			background-image: url('hungaryan_flag.png');
 			background-size: 150% 220%; /* or 200%, or any value > 100% */
 			background-position: center;
 			border-radius: 40%;
 			overflow: hidden; /* clips the excess */
 		}
 		
+				
 		
 		
 		.oldal{
@@ -642,7 +642,11 @@
 			
 		}
 		
-		
+		#kezeles_gyorsmenu:hover{
+			
+			border-top: solid #1E40AF;
+			border-bottom: solid #1E40AF;
+		}
 		
 		#cegnev1{
 			background: linear-gradient(180deg, #93C5FD 0%, #60A5FA 20%, #3B82F6 50%, #1E40AF 100%);
@@ -665,7 +669,11 @@
 			
 		}
 		
-		
+		#kivitelezes_gyorsmenu:hover{
+			
+			border-top: solid #14532D;
+			border-bottom: solid #14532D;
+		}
 		
 		#cegnev2{
 			background: linear-gradient(180deg, #22C55E 0%, #16A34A 25%, #15803D 55%, #0F4222 100%);
@@ -688,7 +696,11 @@
 			
 		}
 		
-		
+		#okosotthon_gyorsmenu:hover{
+			color:darkred;
+			border-top: solid darkred;
+			border-bottom: solid darkred;
+		}
 		
 		#cegnev3{
 			 background: linear-gradient(180deg, #FCA5A5 0%, #F87171 15%, #DC2626 35%, #B91C1C 60%, #991B1B 100%);
@@ -711,7 +723,11 @@
 			
 		}
 		
-		
+		#takaritás_gyorsmenu:hover{
+			color:deepskyblue;
+			border-top: solid deepskyblue;
+			border-bottom: solid deepskyblue;
+		}
 		
 		#cegnev4{
 			 background: linear-gradient(180deg, #BAE6FD 0%, #7DD3FC 20%, #38BDF8 50%, #00BFFF 100%);
@@ -733,7 +749,11 @@
 			color: #B8860B;
 			
 		}
-		
+		#tanacsadas_gyorsmenu:hover{
+			color: #B8860B;
+			border-top: solid #B8860B;
+			border-bottom: solid #B8860B;
+		}
 		
 		#cegnev5{
 			background: linear-gradient(180deg, #FCD34D 0%, #FBBF24 30%, #B8860B 100%);
@@ -762,6 +782,76 @@
 		.reszletek a:hover{
 			text-decoration:underline;
 		}
+		
+		.nyelv-valaszto {
+			position: relative;
+			width: 44px;
+		}
+
+		.nyelv-aktiv {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.nyelv-aktiv img {
+			width: 28px;
+			height: auto;
+			display: block;
+			background-color: transparent;
+		}
+
+		.arrow {
+			margin-left: 6px;
+			width: 6px;
+			height: 6px;
+			border-right: 2px solid #000;
+			border-bottom: 2px solid #000;
+			transform: rotate(45deg);
+			transition: transform 0.25s ease;
+		}
+
+		/* lista */
+		.nyelv-lista {
+			position: absolute;
+			top: 120%;
+			left: 0;
+			background: #fff;
+			border-radius: 6px;
+			box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+			padding: 6px 4px;
+			list-style: none;
+			margin: 0;
+			display: none;
+			z-index: 100;
+		}
+
+		.nyelv-lista li {
+			padding: 6px;
+			cursor: pointer;
+		}
+
+		.nyelv-lista li:hover {
+			background: #f2f2f2;
+		}
+
+		.nyelv-lista img {
+			width: 26px;
+			display: block;
+		}
+
+		/* nyitott állapot */
+		.nyelv-valaszto.open .nyelv-lista {
+			display: block;
+		}
+
+		.nyelv-valaszto.open .arrow {
+			transform: rotate(-135deg);
+		}
+		 
+		.nyelv-valaszto img{
+			border-radius: 45%;
+		}
 	</style>
 </head>
 <body>
@@ -776,11 +866,26 @@
 		<div id="ign_takaritás" class="menupont" >Takarítás </div>
 		<div id="ign_tanacsadas" class="menupont" >Tanácsadás </div>
 		<div id="toltes_fomenu2"> </div>
-		<div id="nyelv" class="menupont" onclick="window.location.href='index_angol.html'">> </div>
+		<div class="nyelv-valaszto">
+			<div class="nyelv-aktiv" id="nyelvToggle">
+				<img src="hungaryan_flag.png" alt="Magyar">
+				<span class="arrow"></span>
+			</div>
+
+			<ul class="nyelv-lista">
+				<li onclick="location.href='index.html'">
+					<img src="hungaryan_flag.png" alt="Magyar">
+				</li>
+				<li onclick="location.href='index_angol.html'">
+					<img src="british_flag.png" alt="English">
+				</li>
+			</ul>
+		</div>
+
 	</div>
 	
 	
-	<div id="szolgaltatasok" > 
+	<div id="szolgaltatasok"> 
 	
 		
 		
@@ -961,18 +1066,6 @@
 <script>
 		const parok = [
 			{
-			  szolg: "ign_kezeles_szolg_fooldal",
-			  menu: "ign_kezeles",
-			  color: "blue",
-			  background: "radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%), linear-gradient(180deg, #050c1c 0%, #07142b 50%, #050c1c 100%)"
-			},
-			{
-			  szolg: "ign_kivitelezes_szolg_fooldal",
-			  menu: "ign_kivitelezes",
-			  color: "green",
-			  background: "radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%), linear-gradient(180deg, #06160d 0%, #0b2a16 50%, #06160d 100%)"
-			},
-			{
 			  szolg: "ign_okosotthon_szolg_fooldal",
 			  menu: "ign_okosotthon",
 			  color: "darkred",
@@ -989,6 +1082,18 @@
 			  menu: "ign_tanacsadas",
 			  color: "gold",
 			  background: "radial-gradient(90% 70% at 50% 50%, rgba(250, 210, 80, 0.32), transparent 70%), linear-gradient(180deg, #4a390e 0%, #5a4310 50%, #4a390e 100%)"
+			},
+			{
+			  szolg: "ign_kezeles_szolg_fooldal",
+			  menu: "ign_kezeles",
+			  color: "blue",
+			  background: "radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%), linear-gradient(180deg, #050c1c 0%, #07142b 50%, #050c1c 100%)"
+			},
+			{
+			  szolg: "ign_kivitelezes_szolg_fooldal",
+			  menu: "ign_kivitelezes",
+			  color: "green",
+			  background: "radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%), linear-gradient(180deg, #06160d 0%, #0b2a16 50%, #06160d 100%)"
 			}
 		];
 		
@@ -999,7 +1104,20 @@
 		let intervalId = null;
 		let szunetel = false;
 		let hoverIndex = null;
+		
+		const nyelv = document.querySelector('.nyelv-valaszto');
+		const toggle = document.getElementById('nyelvToggle');
 
+		toggle.addEventListener('click', () => {
+			nyelv.classList.toggle('open');
+		});
+
+		document.addEventListener('click', (e) => {
+			if (!nyelv.contains(e.target)) {
+				nyelv.classList.remove('open');
+			}
+		});
+		
 		window.onload = function () {
 			initHover();
 			inditValtakozas();
@@ -1011,9 +1129,12 @@
 			const menu = document.getElementById(p.menu);
 			const foOld = document.getElementById("fo_oldal");
 			 menu.style.color = "gray";
+			 menu.style.fontWeight = "300";
 			 menu.style.background = "transparent";
 			 foOld.style.color = "black";
 			 foOld.style.fontWeight = "600";
+			 foOld.style.borderTop= "solid black";
+			 foOld.style.borderBottom= "solid black";
 			});
 		}
 
@@ -1021,7 +1142,8 @@
 			resetAll();
 			const p = parok[index];
 			document.getElementById(p.szolg).style.transform = "scale(1.04)";
-			document.getElementById(p.menu).style.color = p.color;
+			document.getElementById(p.menu).style.color = "black";
+			document.getElementById(p.menu).style.fontWeight = "600";
 		}
 
 		function inditValtakozas() {
@@ -1091,6 +1213,5 @@
 
 </body>
 </html>
-
 
 
