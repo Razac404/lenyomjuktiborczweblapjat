@@ -32,9 +32,8 @@
 			gap: 20px;
 			position: fixed;
 			z-index:1000;
-			background-color: white;
-			/*box-shadow: 0 0 20px #0047AB inset;*/
 			
+			background: radial-gradient(ellipse at center, #fcfcfc 0%, #e8e8e8 100%);
 		}
 		
 		
@@ -62,24 +61,24 @@
 		
 		#toltes_fomenu1{
 			height: 100%;
-			width: 15px;
+			width: 30px;
 		}
 		
 		#toltes_fomenu2{
 			height: 100%;
-			width: 8px;
+			width: 15px;
 		}
 		
 		.menupont{
 			height: 55px; 
-			width: 180px;
+			width: 158px;
 			font-size: 1.4rem;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			cursor: pointer;
 			color:gray;
-			
+			border-radius: 20px;
 			transition: color 0.6s ease-in-out;
 		}
 		
@@ -92,9 +91,6 @@
 			border-radius: 20px;
 		}
 		
-		#ign_kezeles{
-			width: fit-content;
-		}
 		
 		#nyelv {
 			width: 55px;
@@ -102,12 +98,13 @@
 			padding: 0;
 			border: 1px solid;
 			background-image: url('hungaryan_flag.png');
-			background-size: 100% 100%; /* or 200%, or any value > 100% */
+			background-size: 150% 220%; /* or 200%, or any value > 100% */
 			background-position: center;
 			border-radius: 40%;
 			overflow: hidden; /* clips the excess */
 		}
 		
+				
 		
 		
 		.oldal{
@@ -195,17 +192,7 @@
 			font-size: 1.05rem;
 		}
 		
-		.reszletek{
-			padding: 5px;
-		}
 		
-		.reszletek a {
-			
-		}
-		
-		.reszletek a:hover{
-			text-decoration:underline;
-		}
 
 		#szolg1_szoveg{
 			grid-column: 1;
@@ -508,7 +495,7 @@
 		.gyorsmenupont{
 			cursor: pointer;
 			height: 100%;
-			width: 50%;
+			width: 40%;
 			padding: 2px 5px;
 			margin: 10px 0px;
 			display:grid;
@@ -521,139 +508,7 @@
 		
 		
 		
-		#kezeles_gyorsmenu{
-			
-			
-		}
 		
-		#kezeles_gyorsmenu:hover{
-			
-			border-top: solid #1E40AF;
-			border-bottom: solid #1E40AF;
-		}
-		
-		#cegnev1{
-			background: linear-gradient(180deg, #93C5FD 0%, #60A5FA 20%, #3B82F6 50%, #1E40AF 100%);
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-			color: transparent;
-		}
-		
-		#szolg1_gyors{
-			background: linear-gradient(180deg, #93C5FD 0%, #60A5FA 20%, #3B82F6 50%, #1E40AF 100%);
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-			color: transparent;
-		}
-		
-		#kivitelezes_gyorsmenu{
-			
-			
-		}
-		
-		#kivitelezes_gyorsmenu:hover{
-			
-			border-top: solid #14532D;
-			border-bottom: solid #14532D;
-		}
-		
-		#cegnev2{
-			background: linear-gradient(180deg, #22C55E 0%, #16A34A 25%, #15803D 55%, #0F4222 100%);
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-			color: transparent;
-		}
-		
-		#szolg2_gyors{
-			background: linear-gradient(180deg, #22C55E 0%, #16A34A 25%, #15803D 55%, #0F4222 100%);
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-			color: transparent;
-		}
-		
-		#okosotthon_gyorsmenu{
-			color:darkred;
-			
-		}
-		
-		#okosotthon_gyorsmenu:hover{
-			color:darkred;
-			border-top: solid darkred;
-			border-bottom: solid darkred;
-		}
-		
-		#cegnev3{
-			 background: linear-gradient(180deg, #FCA5A5 0%, #F87171 15%, #DC2626 35%, #B91C1C 60%, #991B1B 100%);
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-			color: transparent;
-		}
-		
-		#szolg3_gyors{
-			 background: linear-gradient(180deg, #FCA5A5 0%, #F87171 15%, #DC2626 35%, #B91C1C 60%, #991B1B 100%);
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-			color: transparent;
-		}
-		
-		#takaritás_gyorsmenu{
-			color:deepskyblue;
-			
-		}
-		
-		#takaritás_gyorsmenu:hover{
-			color:deepskyblue;
-			border-top: solid deepskyblue;
-			border-bottom: solid deepskyblue;
-		}
-		
-		#cegnev4{
-			 background: linear-gradient(180deg, #BAE6FD 0%, #7DD3FC 20%, #38BDF8 50%, #00BFFF 100%);
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-			color: transparent;
-		}
-		
-		#szolg4_gyors{
-			 background: linear-gradient(180deg, #BAE6FD 0%, #7DD3FC 20%, #38BDF8 50%, #00BFFF 100%);
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-			color: transparent;
-		}
-		
-		#tanacsadas_gyorsmenu{
-			color: #B8860B;
-			
-		}
-		#tanacsadas_gyorsmenu:hover{
-			color: #B8860B;
-			border-top: solid #B8860B;
-			border-bottom: solid #B8860B;
-		}
-		
-		#cegnev5{
-			background: linear-gradient(180deg, #FCD34D 0%, #FBBF24 30%, #B8860B 100%);
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-			color: transparent;
-		}
-		
-		#szolg5_gyors{
-			background: linear-gradient(180deg, #FCD34D 0%, #FBBF24 30%, #B8860B 100%);
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-			color: transparent;
-		}
 		
 		.logok_gyors{
 			padding: 20px 0px;
@@ -782,9 +637,199 @@
 		
 		}
 		
+		#kezeles_gyorsmenu{
+			
+			
+		}
 		
 		
 		
+		#cegnev1{
+			background: linear-gradient(180deg, #93C5FD 0%, #60A5FA 20%, #3B82F6 50%, #1E40AF 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: transparent;
+		}
+		
+		#szolg1_gyors{
+			background: linear-gradient(180deg, #93C5FD 0%, #60A5FA 20%, #3B82F6 50%, #1E40AF 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: transparent;
+		}
+		
+		#kivitelezes_gyorsmenu{
+			
+			
+		}
+		
+		
+		
+		#cegnev2{
+			background: linear-gradient(180deg, #22C55E 0%, #16A34A 25%, #15803D 55%, #0F4222 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: transparent;
+		}
+		
+		#szolg2_gyors{
+			background: linear-gradient(180deg, #22C55E 0%, #16A34A 25%, #15803D 55%, #0F4222 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: transparent;
+		}
+		
+		#okosotthon_gyorsmenu{
+			color:darkred;
+			
+		}
+		
+		
+		
+		#cegnev3{
+			 background: linear-gradient(180deg, #FCA5A5 0%, #F87171 15%, #DC2626 35%, #B91C1C 60%, #991B1B 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: transparent;
+		}
+		
+		#szolg3_gyors{
+			 background: linear-gradient(180deg, #FCA5A5 0%, #F87171 15%, #DC2626 35%, #B91C1C 60%, #991B1B 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: transparent;
+		}
+		
+		#takaritás_gyorsmenu{
+			color:deepskyblue;
+			
+		}
+		
+		
+		#cegnev4{
+			 background: linear-gradient(180deg, #BAE6FD 0%, #7DD3FC 20%, #38BDF8 50%, #00BFFF 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: transparent;
+		}
+		
+		#szolg4_gyors{
+			 background: linear-gradient(180deg, #BAE6FD 0%, #7DD3FC 20%, #38BDF8 50%, #00BFFF 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: transparent;
+		}
+		
+		#tanacsadas_gyorsmenu{
+			color: #B8860B;
+			
+		}
+		
+		#cegnev5{
+			background: linear-gradient(180deg, #FCD34D 0%, #FBBF24 30%, #B8860B 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: transparent;
+		}
+		
+		#szolg5_gyors{
+			background: linear-gradient(180deg, #FCD34D 0%, #FBBF24 30%, #B8860B 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: transparent;
+		}
+		
+		.reszletek{
+			padding: 18px;
+		}
+		
+		.reszletek a {
+			
+		}
+		
+		.reszletek a:hover{
+			text-decoration:underline;
+		}
+		
+		.nyelv-valaszto {
+			position: relative;
+			width: 44px;
+		}
+
+		.nyelv-aktiv {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.nyelv-aktiv img {
+			width: 28px;
+			height: auto;
+			display: block;
+			background-color: transparent;
+		}
+
+		.arrow {
+			margin-left: 6px;
+			width: 6px;
+			height: 6px;
+			border-right: 2px solid #000;
+			border-bottom: 2px solid #000;
+			transform: rotate(45deg);
+			transition: transform 0.25s ease;
+		}
+
+		/* lista */
+		.nyelv-lista {
+			position: absolute;
+			top: 120%;
+			left: 0;
+			background: #fff;
+			border-radius: 6px;
+			box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+			padding: 6px 4px;
+			list-style: none;
+			margin: 0;
+			display: none;
+			z-index: 100;
+		}
+
+		.nyelv-lista li {
+			padding: 6px;
+			cursor: pointer;
+		}
+
+		.nyelv-lista li:hover {
+			background: #f2f2f2;
+		}
+
+		.nyelv-lista img {
+			width: 26px;
+			display: block;
+		}
+
+		/* nyitott állapot */
+		.nyelv-valaszto.open .nyelv-lista {
+			display: block;
+		}
+
+		.nyelv-valaszto.open .arrow {
+			transform: rotate(-135deg);
+		}
+		 
+		.nyelv-valaszto img{
+			border-radius: 45%;
+		}
 	</style>
 </head>
 <body>
@@ -792,24 +837,41 @@
 		<div id="logo"> <img src="logo_black.PNG" alt="stacked apartments"> </div>
 		<div id="cegnev">ST-Managment</div>
 		<div id="toltes_fomenu1"> </div>
-		<div id="fo_oldal" class="menupont" >H<span id="o_betu">o</span>me </div>
-		<div id="ign_kezeles" class="menupont">Property Management </div>
-		<div id="ign_kivitelezes" class="menupont" >Construction </div>
-		<div id="ign_okosotthon" class="menupont" >Smart Home </div>
-		<div id="ign_takaritás" class="menupont" >Cleaning </div>
-		<div id="ign_tanacsadas" class="menupont" >Consulting </div>
+		<div id="fo_oldal" class="menupont" >Home</div>	
+		<div id="ign_kezeles" class="menupont" style="width:fit-content;">Property Management</div>
+		<div id="ign_kivitelezes" class="menupont" >Construction</div>
+		<div id="ign_okosotthon" class="menupont" >Smart Home</div>
+		<div id="ign_takaritás" class="menupont" >Cleaning</div>
+		<div id="ign_tanacsadas" class="menupont" >Consulting</div>
 		<div id="toltes_fomenu2"> </div>
-		<div id="nyelv" class="menupont" onclick="window.location.href='index.html'"> </div>
+		<div class="nyelv-valaszto">
+			<div class="nyelv-aktiv" id="nyelvToggle">
+				<img src="british_flag.png" alt="Hungarian">
+				<span class="arrow"></span>
+			</div>
+			<ul class="nyelv-lista">
+				<li onclick="location.href='index.html'">
+					<img src="hungaryan_flag.png" alt="Hungarian">
+				</li>
+				<li onclick="location.href='index_angol.html'">
+					<img src="british_flag.png" alt="English">
+				</li>
+			</ul>
+		</div>
 	</div>
 	
-	<div id="szolgaltatasok" > 
+	
+
+	<div id="szolgaltatasok"> 
+	
+		
+		
+
 		<div id="ign_kezeles_szolg_fooldal" class="szolgaltatasok_item bal" >
 			<div id="szolg1_szoveg" class="szoveg">
-				<div id="szolg1_cim" class="cim"> <h1>Short-term Rental Advertising and Management</h1> </div>
+				<div id="szolg1_cim" class="cim"> <h1>Short-term rental listing and management</h1> </div>
 				<div id="szolg1_leiras">
-					At ST Management, we specialize in transforming residential properties into high-performing short-term rental accommodations. 
-					<br>Our services are designed to maximize your income while minimizing the day-to-day responsibilities of property ownership!
-					
+					Our services for converting residential properties into short-term, high-yield rentals are designed to maximize your revenue while minimizing owner responsibilities!
 					<br> <span id="reszletek1" class="reszletek" ><a>more details ➾ </a></span>
 				</div>
 			</div>
@@ -822,8 +884,7 @@
 			<div id="szolg2_szoveg" class="szoveg">
 				<div id="szolg2_cim" class="cim"> <h1>Construction and Renovation</h1> </div>
 				<div id="szolg2_leiras">
-					Whether you're preparing your property for the rental market or upgrading an older building, 
-					<br>our experienced construction team offers full-scale renovation and transformation services!
+					Whether you're preparing your property for rental or planning to modernize an older building,<br>our experienced construction team offers comprehensive transformation!
 					<br> <span id="reszletek2" class="reszletek" ><a>more details ➾ </a></span>
 				</div>
 			</div>
@@ -836,9 +897,8 @@
 			<div id="szolg3_szoveg" class="szoveg">
 				<div id="szolg3_cim" class="cim"> <h1>Smart Home Solutions</h1> </div>
 				<div id="szolg3_leiras">
-					Elevate your property to the next level with modern smart technologies
-					<br>that improve convenience, safety, and efficiency!
-
+					Elevate your property to the next level with modern smart technologies that make operation more comfortable,
+					<br>safer and more efficient!
 					<br> <span id="reszletek3" class="reszletek" ><a>more details ➾ </a></span>
 				</div>
 			</div>
@@ -851,9 +911,8 @@
 			<div id="szolg4_szoveg" class="szoveg">
 				<div id="szolg4_cim" class="cim"> <h1>Cleaning and Laundry</h1> </div>
 				<div id="szolg4_leiras">
-					Cleanliness is essential for positive guest experiences and return bookings. 
-					<br>Our in-house cleaning and laundry operations ensure every property meets hospitality-grade standards!
-					
+					Cleanliness is essential for guest satisfaction and positive reviews.
+					<br>With our own cleaning and laundry services, every property meets professional hospitality standards!
 					<br> <span id="reszletek4" class="reszletek" ><a>more details ➾ </a></span>
 				</div>
 			</div>
@@ -864,10 +923,10 @@
 		
 		<div id="ign_tanacsadas_szolg_fooldal" class="szolgaltatasok_item bal"> 
 			<div id="szolg5_szoveg" class="szoveg">
-				<div id="szolg5_cim" class="cim"> <h1>Real Estate Consulting</h1> </div>
+				<div id="szolg5_cim" class="cim"> <h1>Property Consulting</h1> </div>
 				<div id="szolg5_leiras">
-					Navigating the Hungarian real estate market can be challenging 
-					<br>We offer tailored consulting services to guide investors, homeowners, and buyers through every step of the process!
+					Navigating the Hungarian real estate market can be challenging – we provide personalized assistance 
+					<br>for investors, owners, and buyers alike.
 					<br> <span id="részletek5" class="reszletek"><a>more details ➾ </a></span>
 				</div>
 			</div>
@@ -877,10 +936,13 @@
 		</div>
 	</div>
 	
+	
+
 	<div id="uzenet_iras" class="oldal"> 
 		<div id="kapcsolat_felirat"> 
 			<h1>Request a Quote</h1>
-			<span style="backdrop-filter: blur(15px);border: 1px solid rgba(255, 255, 255, 0.2);box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);">You're just a few clicks away from the solution!</span>
+			
+			<span style="backdrop-filter: blur(15px);border: 1px solid rgba(255, 255, 255, 0.2);box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);">Just a few clicks away from the solution!</span>
 		</div>
 		
 		<div id="formehelye"> 
@@ -916,64 +978,64 @@
 	</div>
 	
 	<div id="kapcsolat" class="oldal"> 
-		<div id="gyorsmenu"> 
-			<div id="kezeles_gyorsmenu" class="gyorsmenupont"> 
-				<div id="logo1" class="logok_gyors" style="grid-column:1; grid-row:1/3"> </div>
-				<div id="cegnev1" class="cegnevek_gyors" style="grid-column:2; grid-row:1;"> ST-Managment </div>
-				<div id="szolg1_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Short-term rental</div>
-			</div>
-			
-			<div id="kivitelezes_gyorsmenu" class="gyorsmenupont"> 
-				<div id="logo2" class="logok_gyors" style="grid-column:1; grid-row:1/3"> </div>
-				<div id="cegnev2" class="cegnevek_gyors" style="grid-column:2; grid-row:1; color:darkgreen;"> ST-Managment </div>
-				<div id="szolg2_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Construction and Renovation</div>
-			</div>
-			
-			<div id="okosotthon_gyorsmenu" class="gyorsmenupont"> 
-				<div id="logo3" class="logok_gyors" style="grid-column:1; grid-row:1/3"> </div>
-				<div id="cegnev3" class="cegnevek_gyors" style="grid-column:2; grid-row:1; color:darkred;"> ST-Managment </div>
-				<div id="szolg3_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Smart Home Solutions</div>
-			</div>
-			
-			<div id="takaritás_gyorsmenu" class="gyorsmenupont ">
-				<div id="logo4" class="logok_gyors" style="grid-column:1; grid-row:1/3"> </div>
-				<div id="cegnev4" class="cegnevek_gyors" style="grid-column:2; grid-row:1; color:deepskyblue;"> ST-Managment </div>
-				<div id="szolg4_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Cleaning and Laundry </div>
-			</div>
-			
-			<div id="tanacsadas_gyorsmenu" class="gyorsmenupont">
-				<div id="logo5" class="logok_gyors" style="grid-column:1; grid-row:1/3"> </div>
-				<div id="cegnev5" class="cegnevek_gyors" style="grid-column:2; grid-row:1;"> ST-Managment </div>
-				<div id="szolg5_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Real Estate Consulting </div>
-			</div>
-		</div>
 		
-		<div id="elerhetosegeink">
-			<div id="telefon_email"> 
-				<div>📧 <strong>Email:</strong> <a href="mailto:info@stmanagement.hu"> info@stmanagement.hu</a> </div>
-				<div>📱 <strong>Telephone:</strong> <a href="tel:+36301865215">+36 30 186 5215</a>	</div>
+			
+			
+			<div id="gyorsmenu"> 
+				 <div id="kezeles_gyorsmenu" class="gyorsmenupont"> 
+					<div id="logo1" class="logok_gyors" style="grid-column:1; grid-row:1/3"> </div>
+					<div id="cegnev1" class="cegnevek_gyors" style="grid-column:2; grid-row:1;"> ST-Managment </div>
+					<div id="szolg1_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Short-term rental</div>
+				 </div>
+				 
+				 <div id="kivitelezes_gyorsmenu" class="gyorsmenupont"> 
+					<div id="logo2" class="logok_gyors" style="grid-column:1; grid-row:1/3"> </div>
+					<div id="cegnev2" class="cegnevek_gyors" style="grid-column:2; grid-row:1; color:darkgreen;"> ST-Managment </div>
+					<div id="szolg2_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Construction and Renovation</div>
+					
+				 </div>
+				 
+				 <div id="okosotthon_gyorsmenu" class="gyorsmenupont"> 
+					<div id="logo3" class="logok_gyors" style="grid-column:1; grid-row:1/3"> </div>
+					<div id="cegnev3" class="cegnevek_gyors" style="grid-column:2; grid-row:1; color:darkred;"> ST-Managment </div>
+					<div id="szolg3_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Smart Home Solutions</div>
+				 </div>
+				 
+				<div id="takaritás_gyorsmenu" class="gyorsmenupont ">
+					<div id="logo4" class="logok_gyors" style="grid-column:1; grid-row:1/3"> </div>
+					
+					<div id="cegnev4" class="cegnevek_gyors" style="grid-column:2; grid-row:1; color:deepskyblue;"> ST-Managment </div>
+					<div id="szolg4_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Cleaning and Laundry</div>
+					
+				</div>
+				<div id="tanacsadas_gyorsmenu" class="gyorsmenupont">
+					<div id="logo5" class="logok_gyors" style="grid-column:1; grid-row:1/3"> </div>
+					
+					<div id="cegnev5" class="cegnevek_gyors" style="grid-column:2; grid-row:1;"> ST-Managment </div>
+					<div id="szolg5_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Property Consulting</div>
+					
+				</div>
+				
 			</div>
-			<div id="gmap"> 
-				<iframe width="100%" height="100%" style="border:0;" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2683.1716768506305!2d19.059068776006062!3d47.49126440040338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc5b3b1f944d%3A0x7227ac17a6b7d878!2sBudapest%2C%20M%C3%BAzeum%20krt.%2041%2C%201053!5e0!3m2!1shu!2shu!4v1734012060000!5m2!1shu!2shu">
-				</iframe>
+			
+			<div id="elerhetosegeink">
+				<div id="telefon_email"> 
+					<div>📧 <strong>Email:</strong> <a href="mailto:info@stmanagement.hu"> info@stmanagement.hu</a> </div>
+					<div>📱 <strong>Phone:</strong> <a href="tel:+36301865215">+36 30 186 5215</a>	</div>
+				</div>
+				<div id="gmap"> 
+					<iframe width="100%" height="100%" style="border:0;" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2683.1716768506305!2d19.059068776006062!3d47.49126440040338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc5b3b1f944d%3A0x7227ac17a6b7d878!2sBudapest%2C%20M%C3%BAzeum%20krt.%2041%2C%201053!5e0!3m2!1shu!2shu!4v1734012060000!5m2!1shu!2shu">
+
+					</iframe>
+				</div>
+				
+				
 			</div>
-		</div>
+		
 	</div>
 	
 <script>
 		const parok = [
-			{
-			  szolg: "ign_kezeles_szolg_fooldal",
-			  menu: "ign_kezeles",
-			  color: "blue",
-			  background: "radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%), linear-gradient(180deg, #050c1c 0%, #07142b 50%, #050c1c 100%)"
-			},
-			{
-			  szolg: "ign_kivitelezes_szolg_fooldal",
-			  menu: "ign_kivitelezes",
-			  color: "green",
-			  background: "radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%), linear-gradient(180deg, #06160d 0%, #0b2a16 50%, #06160d 100%)"
-			},
 			{
 			  szolg: "ign_okosotthon_szolg_fooldal",
 			  menu: "ign_okosotthon",
@@ -991,6 +1053,18 @@
 			  menu: "ign_tanacsadas",
 			  color: "gold",
 			  background: "radial-gradient(90% 70% at 50% 50%, rgba(250, 210, 80, 0.32), transparent 70%), linear-gradient(180deg, #4a390e 0%, #5a4310 50%, #4a390e 100%)"
+			},
+			{
+			  szolg: "ign_kezeles_szolg_fooldal",
+			  menu: "ign_kezeles",
+			  color: "blue",
+			  background: "radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%), linear-gradient(180deg, #050c1c 0%, #07142b 50%, #050c1c 100%)"
+			},
+			{
+			  szolg: "ign_kivitelezes_szolg_fooldal",
+			  menu: "ign_kivitelezes",
+			  color: "green",
+			  background: "radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%), linear-gradient(180deg, #06160d 0%, #0b2a16 50%, #06160d 100%)"
 			}
 		];
 		
@@ -1001,7 +1075,20 @@
 		let intervalId = null;
 		let szunetel = false;
 		let hoverIndex = null;
+		
+		const nyelv = document.querySelector('.nyelv-valaszto');
+		const toggle = document.getElementById('nyelvToggle');
 
+		toggle.addEventListener('click', () => {
+			nyelv.classList.toggle('open');
+		});
+
+		document.addEventListener('click', (e) => {
+			if (!nyelv.contains(e.target)) {
+				nyelv.classList.remove('open');
+			}
+		});
+		
 		window.onload = function () {
 			initHover();
 			inditValtakozas();
@@ -1013,9 +1100,12 @@
 			const menu = document.getElementById(p.menu);
 			const foOld = document.getElementById("fo_oldal");
 			 menu.style.color = "gray";
+			 menu.style.fontWeight = "300";
 			 menu.style.background = "transparent";
 			 foOld.style.color = "black";
 			 foOld.style.fontWeight = "600";
+			 foOld.style.borderTop= "solid black";
+			 foOld.style.borderBottom= "solid black";
 			});
 		}
 
@@ -1023,7 +1113,8 @@
 			resetAll();
 			const p = parok[index];
 			document.getElementById(p.szolg).style.transform = "scale(1.04)";
-			document.getElementById(p.menu).style.color = p.color;
+			document.getElementById(p.menu).style.color = "black";
+			document.getElementById(p.menu).style.fontWeight = "600";
 		}
 
 		function inditValtakozas() {
