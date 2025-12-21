@@ -191,14 +191,21 @@
 			grid-template-rows: 100%;
 			display: grid;
 			border-radius: 25px;
-			padding: 5px 5px 12px 5px;
+			padding: 8px;
 			margin: 2px;
 			transition: transform 0.6s ease-in-out, background 0.6s ease-in-out;
 			cursor: pointer;
 			font-size: 1.05rem;
+			
 		}
 		
-		
+		.szoveg{
+			display:grid;
+			grid-template-columns: 100%;
+			grid-template-rows: 50% 50%;
+			padding: 5px 0px 5px 20px;
+			
+		}
 
 		#szolg1_szoveg{
 			grid-column: 1;
@@ -250,13 +257,7 @@
 			grid-row: 1;
 		}
 		
-		.szoveg{
-			display:grid;
-			grid-template-columns: 100%;
-			grid-template-rows: 50% 50%;
-			padding: 5px 0px 5px 20px;
-			
-		}
+		
 		
 		.kep{
 			display:flex;
@@ -268,6 +269,11 @@
 			padding-top: 12px;
 			padding-left: 20px;
 			font-family: Bell MT;
+		}
+		
+		.leiras{
+			margin-top: -10px;
+			
 		}
 		
 		
@@ -341,6 +347,23 @@
 			grid-row: 1;
 			font-size: 1.5rem;
 			line-height: 1.5;
+			margin-top: 5px;
+		}
+		
+		#arAjanlat{
+			font-size: 2rem;
+			font-weight: 600;
+			cursor: pointer;
+			padding: 0 5%;
+		}
+		
+		
+		#marCsak{
+			backdrop-filter: blur(15px);
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+			margin-top: 20px;
+			display: inline-block;
 		}
 		
 		#formehelye{
@@ -358,6 +381,7 @@
 			display: flex;
 			flex-direction: column;
 			gap: 15px;
+			margin-top: 55px;
 		}
 		
 		.form-group {
@@ -396,12 +420,12 @@
 		}
 		
 		.form-group textarea {
-			min-height: 150px;
+			min-height: 200px;
 			resize: vertical;
 		}
 		
 		#uzenet_form button {
-			padding: 12px 30px;
+			padding: 15px 30px;
 			background:
 				radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%),
 				linear-gradient(180deg, #050c1c 0%, #07142b 50%, #050c1c 100%);
@@ -411,6 +435,7 @@
 			font-size: 1.1rem;
 			cursor: pointer;
 			margin-top: 10px;
+			letter-spacing: 1px; /* vagy más érték */
 		}
 		
 		#uzenet_form button:hover {
@@ -579,69 +604,6 @@
 			color: transparent;
 		}
 		
-		
-		@media screen and (max-width: 1720px){
-			#fomenu{
-			height: 100px;
-			width: 100%;
-			gap: 12px;/*20px*/
-			
-		}
-		.menupont{
-			height: 55px; 
-			width: 125px;
-			font-size: 1.2rem;/*1.4rem*/
-			
-		}
-		#cegnev{
-			font-size: 2.5rem; /*3rem*/
-			font-weight: 500;
-			font-stretch: 125%;
-			
-		}
-
-		#logo{
-			margin-left: -20px; /*-40px*/
-		}
-		
-		#logo img {
-			max-height: 90px;/*100px*/
-			width: auto;
-		}
-		#toltes_fomenu1{
-			height: 100%;
-			width: 5px;
-		}
-		
-		#toltes_fomenu2{
-			height: 100%;
-			width: 8px;
-		}
-		#szolgaltatasok{
-			display: grid;
-			grid-template-columns: 8% 82% 8%;
-			grid-template-rows: 20% 20% 20% 20% 20%;
-		}
-
-		.szolgaltatasok_item{
-			border-radius: 25px;
-			padding: 5px;
-			margin: 5px;/*2px*/
-			transition: color 0.5s ease;
-		}
-
-		#uzenet_iras{
-			display:grid;
-			grid-template-columns: 10% 80% 10%;
-			grid-template-rows: 12% 87.5% 0.5%;
-			background-image: url('contact_bckgrnd.jpg');
-			background-size:cover;
-			background-position: center;
-			/*border: 1px solid red;*/
-		}
-
-		
-		}
 		
 		#kezeles_gyorsmenu{
 			
@@ -833,6 +795,196 @@
 		.nyelv-valaszto img{
 			border-radius: 45%;
 		}
+		
+		
+		@media screen and (max-width:1725px){
+			#fomenu{
+				gap: 12px;/*20px*/
+				
+			}
+			.menupont{
+				height: 55px; 
+				width: 140px;
+				font-size: 1.2rem;/*1.4rem*/
+				
+			}
+			
+			#cegnev{
+				font-size: 2.5rem; /*3rem*/
+				font-stretch: 125%;/*150%*/
+				
+			}
+			
+			h1{
+				font-size:1.8rem;
+			}
+			
+			#o_betu{
+				font-family: 'Gilda Display';
+				font-size:1.09rem;
+			}
+			
+			#szolgaltatasok{
+				display: grid;
+				grid-template-columns: 5% 90% 5%;
+				font-size: 1.00rem;/*1.05rem*/
+
+			}
+			
+			#gyorsmenu{
+				grid-column: 1;
+				grid-row: 1;
+				height:100%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 10% 0%;
+				margin-left: -10%;
+				
+			}
+			
+			.gyorsmenupont{
+				width: 55%; /*40%*/
+			}
+			
+			
+			#gmap{
+				margin-top: -5%; /*none*/
+				height:27%;
+				padding: 0px 15%;			
+			}
+		}
+		
+		@media screen and (max-width:1500px){
+			#cegnev{
+				font-size: 2.3rem; /*3rem*/
+				font-stretch: 125%;/*150%*/
+				
+			}
+			
+			.menupont{
+				height: 55px; 
+				width: 120px;
+				font-size: 1.1rem;/*1.4rem*/
+				
+			}
+									
+			h1{
+				font-size:1.7rem;
+			}
+			
+			#o_betu{
+				font-size:0.99rem;
+			}
+			
+			#gyorsmenu{
+				padding: 10% 0%;
+				margin-left: -8%;
+				
+			}
+						
+			#gmap{
+				height:24%;
+				width: 100%;
+				padding: 0px 12%;	
+			}
+			
+			#szolgaltatasok{
+				font-size: 	0.95rem;/*1.05rem*/
+				grid-template-columns: 4% 90% 4%;
+			}
+			
+			.szoveg{
+				padding: 5px 0px 5px 8px;
+			}
+		}
+		
+		@media screen and (max-width:1350px){
+			#fomenu{
+				gap: 8px;/*20px*/
+				
+			}
+			#cegnev{
+				font-size: 2.1rem; /*3rem*/
+			}
+			.menupont{
+				height: 55px; 
+				width: 120px;
+				font-size: 1rem;/*1.4rem*/
+				
+			}
+			h1{
+				font-size:1.6rem;
+			}
+			
+			#o_betu{
+				font-family: 'Gilda Display';
+				font-size:0.89rem;
+			}
+						
+			#gmap{
+				height:24%;
+				width: 100%;
+				padding: 0px 12%;	
+			}
+			
+			#szolgaltatasok{
+				font-size: 	0.75rem;/*1.05rem*/
+				grid-template-columns: 3% 90% 3%;
+			}
+			
+			.szoveg{
+				padding: 5px 0px 5px 7px;
+			}
+		}
+		
+		@media screen and (max-height:1000px){
+			#kapcsolat_felirat{
+				font-size: 1.4rem;
+				margin-top: 5px;
+			}
+			
+			#arAjanlat{
+				font-size: 1.9rem;
+				font-weight: 600;
+				cursor: pointer;
+				padding: 0 5%;
+			}
+		
+			#marCsak{
+				
+				margin-top: 12px;
+				display: inline-block;
+			}
+			
+			#uzenet_form {
+				gap: 12px; /*15px*/
+				margin-top: 55px;
+			}
+			
+			.form-group label {
+				margin-bottom: 5px;
+				font-weight: 800;
+				padding: 8px;
+				font-size: 1rem;/*1.1rem*/
+			}		
+			
+			.form-group input[type="text"],
+			.form-group input[type="email"],
+			.form-group input[type="tel"],
+			.form-group textarea {
+				padding: 5px 8px;
+				font-size: 0.9rem;/*1rem*/
+			}
+			
+			#uzenet_form button {			
+				font-size: 1rem;/*1.1rem*/
+				margin-top: 8px; /*10px*/
+			}
+		}
+		
+		
 	</style>
 </head>
 <body>
@@ -873,7 +1025,7 @@
 		<div id="ign_kezeles_szolg_fooldal" class="szolgaltatasok_item bal" >
 			<div id="szolg1_szoveg" class="szoveg">
 				<div id="szolg1_cim" class="cim"> <h1>Rövid távú kiadás hirdetése és kezelése</h1> </div>
-				<div id="szolg1_leiras">
+				<div id="szolg1_leiras" class="leiras">
 					Lakóingatlanok rövid távú, magas hozamot biztosító bérleményekké történő átalakítására irányuló szolgáltatásainkat úgy alakítottuk ki, hogy a lehető legnagyobb bevételt biztosítsák Önnek, miközben minimálisra csökkentjük a tulajdonosi teendőket!
 					<br> <span id="reszletek1" class="reszletek" ><a>további részletek ➾ </a></span>
 				</div>
@@ -886,7 +1038,7 @@
 		<div id="ign_kivitelezes_szolg_fooldal" class="szolgaltatasok_item jobb">
 			<div id="szolg2_szoveg" class="szoveg">
 				<div id="szolg2_cim" class="cim"> <h1>Kivitelezés és felújítás</h1> </div>
-				<div id="szolg2_leiras">
+				<div id="szolg2_leiras" class="leiras">
 					Akár kiadásra készíti elő ingatlanát, akár egy régebbi épület korszerűsítését tervezi,<br>tapasztalt kivitelező csapatunk teljes körű átalakítást kínál!
 					<br> <span id="reszletek2" class="reszletek" ><a>további részletek ➾ </a></span>
 				</div>
@@ -899,7 +1051,7 @@
 		<div id="ign_okosotthon_szolg_fooldal" class="szolgaltatasok_item bal">
 			<div id="szolg3_szoveg" class="szoveg">
 				<div id="szolg3_cim" class="cim"> <h1>Okosotthon megoldások</h1> </div>
-				<div id="szolg3_leiras">
+				<div id="szolg3_leiras" class="leiras">
 					Emelje ingatlanát a következő szintre modern okostechnológiákkal, amelyek kényelmesebbé,
 					<br>biztonságosabbá és hatékonyabbá teszik a működtetést!
 					<br> <span id="reszletek3" class="reszletek" ><a>további részletek ➾ </a></span>
@@ -913,7 +1065,7 @@
 		<div id="ign_takaritás_szolg_fooldal" class="szolgaltatasok_item jobb"> 
 			<div id="szolg4_szoveg" class="szoveg">
 				<div id="szolg4_cim" class="cim"> <h1>Takarítás és mosás</h1> </div>
-				<div id="szolg4_leiras">
+				<div id="szolg4_leiras" class="leiras">
 					A tisztaság alapvető fontosságú a vendégek elégedettsége és a pozitív értékelések szempontjából.
 					<br>Saját takarító- és mosodai szolgáltatásunkkal minden ingatlan megfelel a professzionális vendéglátóipari normáknak!
 					<br> <span id="reszletek4" class="reszletek" ><a>további részletek ➾ </a></span>
@@ -927,7 +1079,7 @@
 		<div id="ign_tanacsadas_szolg_fooldal" class="szolgaltatasok_item bal"> 
 			<div id="szolg5_szoveg" class="szoveg">
 				<div id="szolg5_cim" class="cim"> <h1>Ingatlan tanácsadás</h1> </div>
-				<div id="szolg5_leiras">
+				<div id="szolg5_leiras" class="leiras">
 					A magyar ingatlanpiacon való eligazodás kihívást jelenthet – ebben nyújtunk személyre szabott segítséget 
 					<br>befektetőknek, tulajdonosoknak és vásárlóknak egyaránt.
 					<br> <span id="részletek5" class="reszletek"><a>további részletek ➾ </a></span>
@@ -942,9 +1094,9 @@
 	
 	<div id="uzenet_iras" class="oldal"> 
 		<div id="kapcsolat_felirat"> 
-			<h1>Árajánlat kérés</h1>
-			
-			<span style="backdrop-filter: blur(15px);border: 1px solid rgba(255, 255, 255, 0.2);box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);">Már csak néhány kattintásra vagy a megoldástól ! </span>
+			<span id="arAjanlat">Árajánlat kérés</span>
+			<br>
+			<span id="marCsak">Már csak néhány kattintásra vagy a megoldástól ! </span>
 		</div>
 		
 		<div id="formehelye"> 
@@ -1099,6 +1251,13 @@
 			}
 		});
 		
+		window.addEventListener('load', function() {
+  const ta = document.getElementById('uzenet');
+  if (ta) {
+	ta.value = 'monitor height: ' + window.innerHeight + 'px' + '  |  monitor width: ' + window.innerWidth + 'px';
+  }
+});
+
 		window.onload = function () {
 			initHover();
 			inditValtakozas();
@@ -1136,7 +1295,7 @@
 			document.getElementById(p.menu).style.color = "black";
 			document.getElementById(p.menu).style.fontWeight = "600";
 		}
-
+	
 		function inditValtakozas() {
 			kiemel(aktualisIndex);
 
