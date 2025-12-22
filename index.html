@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ST-Management</title>
+	<title>_ST-Management</title>
 	<style>
 	
 		*{
@@ -1509,6 +1509,76 @@
 		const reszletekHivat = [
 			"reszletek1","reszletek2", "reszletek3", "reszletek4", "reszletek5"
 		]
+		
+		const linkek=[
+		{
+			azon:"fo_oldal",
+			destinat:"index.html"
+		},
+		{
+			azon:"ign_kezeles",
+			destinat:"kezeles.html"
+		},
+		{
+			azon:"reszletek1",
+			destinat:"kezeles.html"
+		},
+		{
+			azon:"kezeles_gyorsmenu",
+			destinat:"kezeles.html"
+		},		
+		{
+			azon:"ign_kivitelezes",
+			destinat:"kivitelezes.html"
+		},
+		{
+			azon:"reszletek2",
+			destinat:"kivitelezes.html"
+		},
+		{
+			azon:"kivitelezes_gyorsmenu",
+			destinat:"kivitelezes.html"
+		},
+		
+		{
+			azon:"ign_okosotthon",
+			destinat:"okosotthon.html"
+		},
+		{
+			azon:"reszletek3",
+			destinat:"okosotthon.html"
+		},
+		{
+			azon:"okosotthon_gyorsmenu",
+			destinat:"okosotthon.html"
+		},
+		
+		{
+			azon:"ign_takaritás",
+			destinat:"takaritas.html"
+		},
+		{
+			azon:"reszletek4",
+			destinat:"takaritas.html"
+		},
+		{
+			azon:"takaritás_gyorsmenu",
+			destinat:"takaritas.html"
+		},
+		
+		{
+			azon:"ign_tanacsadas",
+			destinat:"tanacsadas.html"
+		},
+		{
+			azon:"reszletek5",
+			destinat:"tanacsadas.html"
+		},
+		{
+			azon:"tanacsadas_gyorsmenu",
+			destinat:"tanacsadas.html"
+		}
+		];
 		let aktualisIndex = 0;
 		let intervalId = null;
 		let szunetel = false;
@@ -1537,15 +1607,14 @@
 		window.onload = function () {
 			initHover();
 			inditValtakozas();
-			document.getElementById('ign_kezeles').addEventListener('click', function(){
-				window.location.href= "kiadas.html";
+			
+			linkek.forEach(l=>{
+				document.getElementById(l.azon).addEventListener('click', function(){
+					window.location.href=l.destinat
+				});
 			});
-			document.getElementById('reszletek1').addEventListener('click', function(){
-				window.location.href= "kiadas.html";
-			});
-			document.getElementById('kezeles_gyorsmenu').addEventListener('click', function(){
-				window.location.href= "kiadas.html";
-			});
+			
+			
 			
 		};
 
