@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ST-Managment</title>
+	<title>_ST-Management</title>
 	<style>
 	
 		*{
@@ -20,11 +20,8 @@
 		
 		
 		h1{
-			font-size:2.2rem;
-			
+			font-size:2rem;
 		}
-		
-		
 		
 		#fomenu{
 			height: 120px;
@@ -46,41 +43,6 @@
 		
 		
 		
-		#almenu{
-			height: 100px;
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			gap: 20px;
-			position: fixed;
-			z-index:999;
-			top: 120px;
-			background:
-				radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%),
-				linear-gradient(180deg, #050c1c 0%, #07142b 50%, #050c1c 100%);
-			color: white;
-			
-		}
-		
-		.al_menupont{
-			height: 55px; 
-			width: content-fit;
-			padding: 5px 8px;
-			font-size: 1.2rem;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			cursor: pointer;
-			border-radius: 20px;
-			transition: color 0.6s ease-in-out;
-		}
-		
-		.al_menupont:hover{
-			border-top: solid white;
-			border-bottom: solid white;
-		}
 		
 		
 		#ign_kezeles,#ign_kivitelezes {
@@ -107,7 +69,7 @@
 			height: 100%;
 			width: 30px;
 		}
-		
+
 		#toltes_fomenu2{
 			height: 100%;
 			width: 15px;
@@ -126,6 +88,7 @@
 			transition: color 0.6s ease-in-out;
 		}
 		
+
 		
 		.menupont:hover{
 			border-radius: 20px;
@@ -145,224 +108,221 @@
 		}
 		
 				
-		#ign_kezeles{
-			
-			background:
-				radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%),
-				linear-gradient(180deg, #050c1c 0%, #07142b 50%, #050c1c 100%);
-			color:white;
-		}
-		
-		#fo_oldal:hover{
-			border-radius: 20px;
-			border-top: solid black;
-			border-bottom: solid black;
-			color:black;
-			font-weight: 600;
-		}
-		
-		#ign_kivitelezes:hover{
-			background:
-				radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%),
-				linear-gradient(180deg, #06160d 0%, #0b2a16 50%, #06160d 100%);
-			color:white;
-		}
-		
-		#ign_okosotthon:hover{
-			background:
-				radial-gradient(90% 70% at 50% 50%, rgba(230, 90, 90, 0.32), transparent 70%),
-				linear-gradient(180deg, #1c0404 0%, #2a0b0b 50%, #1c0404 100%);
-			color:white;
-		}
-		
-		#ign_takaritás:hover{
-			background:
-				radial-gradient(95% 75% at 50% 50%, rgba(140, 200, 255, 0.32), transparent 72%),
-				linear-gradient(180deg, #0f2338 0%, deepskyblue 50%, #0b1829 100%);
-			color:white;
-		}
-		
-		#ign_tanacsadas:hover{
-			background:
-				radial-gradient(90% 70% at 50% 50%, rgba(250, 210, 80, 0.32), transparent 70%),
-				linear-gradient(180deg, #4a390e 0%, #5a4310 50%, #4a390e 100%);
-			color:white;
-		}
-		
 		
 		
 		.oldal{
-			height: calc(92vh - 220px);
+			
+			height: calc(95vh - 120px) !important;
+			
 			overflow: hidden; /* hogy semmi ne lógjon túl */
-			
-			z-index:1;
 		}
 		
-		
-		
-		#oldaltoltes {
-			height: 220px;
-			width: 100%;
-			display: block;
-		}
-
-		
-	
-		.feher1{
-			
+		#szolgaltatasok{
 			display: grid;
-			grid-template-columns: 50% 50%;
-			grid-template-rows: 100%;
-			background: linear-gradient(to right, black, blue);
-			  -webkit-background-clip: text;
-			  -webkit-text-fill-color: transparent;
-		}
-		
-		.feher{
-			/*color: #07388f;*/
-			display: grid;
-			grid-template-columns: 50% 50%;
-			grid-template-rows: 100%;
-			background: linear-gradient(to bottom,#050c1c 0%,white 4%,white 95%,white 100%);
-			
-    
-		}
-
-		.szines{
-			display: grid;
-			grid-template-columns: 50% 50%;
-			grid-template-rows: 100%;
-			color: white;
-			background:
-				radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%),
-				linear-gradient(180deg, white 0%, #050c1c 5%, #07142b 50%, #050c1c 100%);
-			
-		}
-		
-		
-		.felirat_resz1{
-			width:fit-content;
-			margin: 0 auto;
-			padding-top: 8%;
-			
-		}
-		
-		.felirat_resz{
-			width:fit-content;
-			margin: 0 auto;
-			padding-top: 10%;
-			
-		}
-		
-		.tobbi_resz1{
-			height: 100%;
-			width: 85%;
-			font-family: Arial;
-			padding-top: 8%;
-			align-items:center;
-			
-		}
-		
-		.tobbi_resz{
-			height: 100%;
-			width: 85%;
-			font-family: Arial;
-			padding-top: 10%;
-			align-items:center;
-			
-		}
-		
-		.tartalom_feherHatter{
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			padding-top: 5%;
-			align-items: center;
-			border-top: 0.5px solid gray;
-			font-size: 1.2rem;
-			text-align: center;
-			
-			background: linear-gradient(to bottom right, #043fb8 0%, #083fa8 10%, #0d3c94 20%, #12367d 40%, #0f3a8c 50%, #0b347a 60%, #082e68 70%, #07285a 80%, #06224d 90%, #051c40 100%);
-			  -webkit-background-clip: text;
-			  -webkit-text-fill-color: transparent;
-			letter-spacing: 0.1em;
-		}
-		
-		.tartalom_szinesHatter{
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			padding-top: 5%;
-			align-items: center;
-			border-top: 0.5px solid gray;
-			font-size: 1.2rem;
-			text-align: center;
+			grid-template-columns: 10% 80% 10%;
 			
 			color:white;
+			grid-template-rows: 20% 20% 20% 20% 20%;
+			height: 95vh;
+			padding-top: 120px;
 		}
 		
-		.kepek{
-			height: 40%;
-			width: 70%;
-			border-radius: 20px;
-			margin: 10% auto 0 auto;
-			padding: 5px;
-			background-size: cover; 
-			background-position: center;
-			background-repeat: no-repeat;
+		
+		
+		
+		
+		
+		
+		#ign_kezeles_szolg_fooldal{
+			grid-column: 2;
+			grid-row: 1;
+			background:
+				radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%),
+				linear-gradient(180deg, #050c1c 0%, #07142b 50%, #050c1c 100%);
+			
+		}
+
+		#ign_kivitelezes_szolg_fooldal{
+			grid-column: 2;
+			grid-row: 2;
+			/*box-shadow: inset 0 0 6px 2px rgba(0, 128, 0, 0.45),inset 0 0 10px 6px rgba(34, 139, 34, 0.35),inset 0 0 14px 10px rgba(50, 205, 50, 0.25),inset 0 0 18px 14px rgba(144, 238, 144, 0.18);*/
+			background:
+				/* broader light in the middle */
+				radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%),
+				/* darker top/bottom base */
+				linear-gradient(180deg, #06160d 0%, #0b2a16 50%, #06160d 100%);
+		}
+		
+		
+		#ign_okosotthon_szolg_fooldal{
+			grid-column: 2;
+			grid-row: 3;
+			/*box-shadow: 0 0 50px darkred inset;*/
+			background:
+				radial-gradient(90% 70% at 50% 50%, rgba(230, 90, 90, 0.32), transparent 70%),
+				linear-gradient(180deg, #1c0404 0%, #2a0b0b 50%, #1c0404 100%);
+		}
+		
+		#ign_takaritás_szolg_fooldal{
+			grid-column: 2;
+			grid-row: 4;
+			/*box-shadow: 0 0 100px deepskyblue inset;*/
+			background:
+				radial-gradient(95% 75% at 50% 50%, rgba(140, 200, 255, 0.32), transparent 72%),
+				linear-gradient(180deg, #0f2338 0%, deepskyblue 50%, #0b1829 100%);
+				
+		}
+		
+		#ign_tanacsadas_szolg_fooldal{
+			grid-column: 2;
+			grid-row: 5;
+			background:
+				radial-gradient(90% 70% at 50% 50%, rgba(250, 210, 80, 0.32), transparent 70%),
+				linear-gradient(180deg, #4a390e 0%, #5a4310 50%, #4a390e 100%);
+		}
+		
+		
+		
+		.szolgaltatasok_item{
+			grid-template-columns: 70% 30%;
+			grid-template-rows: 100%;
+			display: grid;
+			border-radius: 25px;
+			padding: 8px;
+			margin: 2px;
+			transition: transform 0.6s ease-in-out, background 0.6s ease-in-out;
+			cursor: pointer;
+			font-size: 1.05rem;
+			
+		}
+		
+		.szoveg{
+			display:grid;
+			grid-template-columns: 100%;
+			grid-template-rows: 50% 50%;
+			padding: 5px 0px 5px 20px;
+			
+		}
+
+		#szolg1_szoveg{
+			grid-column: 1;
+			grid-row: 1;
+		}
+		
+		#szolg1_kep{
+			grid-column: 2;
+			grid-row: 1;
+		}
+		
+		#szolg2_szoveg{
+			grid-column: 1;
+			grid-row: 1;
+		}
+		
+		#szolg2_kep{
+			grid-column: 2;
+			grid-row: 1;
+		}
+		
+		#szolg3_szoveg{
+			grid-column: 1;
+			grid-row: 1;
+		}
+		
+		#szolg3_kep{
+			grid-column: 2;
+			grid-row: 1;
+		}
+		
+		#szolg4_szoveg{
+			grid-column: 1;
+			grid-row: 1;
+		}
+		
+		#szolg4_kep{
+			grid-column: 2;
+			grid-row: 1;
+		}
+		
+		#szolg5_szoveg{
+			grid-column: 1;
+			grid-row: 1;
+		}
+		
+		#szolg5_kep{
+			grid-column: 2;
+			grid-row: 1;
+		}
+		
+		
+		
+		.kep{
+			display:flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		.cim{
+			padding-top: 12px;
+			padding-left: 20px;
+			font-family: Bell MT;
+		}
+		
+		.leiras{
+			margin-top: -10px;
 			
 		}
 		
 		
-		#kep1{
-			background-image: url('360tura.jpg');			
+		#szolg1_cim{
+			grid-column: 1;
+			grid-row: 1;
 		}
 		
-		#kep2{
-			background-image: url('multiPlatform.jpg');
- 	
-	
+		#szolg1_leiras{
+			grid-column: 1;
+			grid-row: 2;
 		}
 		
-		#kep2 img{
-			border-radius: 20%;		
-		}
-		#kep3{
-			background-image: url('communication.jpg');	
-			height: 45%;			
+		#szolg2_cim{
+			grid-column: 1;
+			grid-row: 1;
 		}
 		
-		#kep4{
-			background-image: url('aropt.jpg');			
+		#szolg2_leiras{
+			grid-column: 1;
+			grid-row: 2;
 		}
 		
-		#kep5{
-			background-image: url('jogszabalym.jpg');		
-			height: 55%;
-			width: 75%;
-			margin: 5% auto 0 auto;
+		#szolg3_cim{
+			grid-column: 1;
+			grid-row: 1;
 		}
 		
-		#kep6{
-			background-image: url('karbantartas.png');			
+		#szolg3_leiras{
+			grid-column: 1;
+			grid-row: 2;
 		}
 		
-		.szinesfelirat_cl{
-			border-top: solid 1.5px;
-			padding-top: 5%;
-			background: linear-gradient(to bottom right, #055cf7 0%, #105ce3 10%, #1759cf 20%, #1d53b3 40%, #055cf7 50%, #105ce3 60%, #1759cf 70%, #1d53b3 80%,#1d4a99 90%, #1a3e7d 100% );
-			  -webkit-background-clip: text;
-			  -webkit-text-fill-color: transparent;
+		#szolg4_cim{
+			grid-column: 1;
+			grid-row: 1;
 		}
 		
-		
-		.feherfelirat_cl{
-			border-top: solid 1.5px;
-			padding-top: 5%;
-			color:white
+		#szolg4_leiras{
+			grid-column: 1;
+			grid-row: 2;
 		}
 		
+		#szolg5_cim{
+			grid-column: 1;
+			grid-row: 1;
+		}
 		
+		#szolg5_leiras{
+			grid-column: 1;
+			grid-row: 2;
+		}
 		
 		
 		
@@ -371,10 +331,11 @@
 		#uzenet_iras{
 			display:grid;
 			grid-template-columns: 10% 80% 10%;
-			grid-template-rows: 10% 89% 1%;
+			grid-template-rows: 10% 85% 5%;
 			background-image: url('contact_bckgrnd.jpg');
 			background-size:cover;
 			background-position: center;
+			/*border: 1px solid red;*/
 		}
 		
 		#kapcsolat_felirat{
@@ -383,7 +344,23 @@
 			grid-row: 1;
 			font-size: 1.5rem;
 			line-height: 1.5;
+			margin-top: 5px;
+		}
+		
+		#arAjanlat{
+			font-size: 2rem;
+			font-weight: 600;
 			cursor: pointer;
+			padding: 0 5%;
+		}
+		
+		
+		#marCsak{
+			backdrop-filter: blur(15px);
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+			margin-top: 20px;
+			display: inline-block;
 		}
 		
 		#formehelye{
@@ -393,7 +370,6 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			
 		}
 		
 		#uzenet_form {
@@ -401,8 +377,8 @@
 			max-width: 600px;
 			display: flex;
 			flex-direction: column;
-			gap: 20px;
-			margin-top: 20px;
+			gap: 15px;
+			margin-top: 55px;
 		}
 		
 		.form-group {
@@ -418,7 +394,7 @@
 			backdrop-filter: blur(15px);
 			border: 1px solid rgba(255, 255, 255, 0.2);
 			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-			padding: 5px;
+			padding: 8px;
 			border-radius: 3px;
 			width:auto;
 			font-size: 1.1rem;
@@ -433,7 +409,7 @@
 		.form-group input[type="email"],
 		.form-group input[type="tel"],
 		.form-group textarea {
-			padding: 4px 5px;
+			padding: 5px 8px;
 			border: 1px solid #ccc;
 			border-radius: 5px;
 			font-size: 1rem;
@@ -441,12 +417,12 @@
 		}
 		
 		.form-group textarea {
-			min-height: 155px;
+			min-height: 200px;
 			resize: vertical;
 		}
 		
 		#uzenet_form button {
-			padding: 12px 30px;
+			padding: 15px 30px;
 			background:
 				radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%),
 				linear-gradient(180deg, #050c1c 0%, #07142b 50%, #050c1c 100%);
@@ -456,6 +432,7 @@
 			font-size: 1.1rem;
 			cursor: pointer;
 			margin-top: 10px;
+			letter-spacing: 1px; /* vagy más érték */
 		}
 		
 		#uzenet_form button:hover {
@@ -522,7 +499,7 @@
 			height:30%;
 			width: 100%;
 			padding: 0px 22%;
-			
+			margin-top: -0.5%; 
 			
 		}
 		
@@ -624,11 +601,11 @@
 			color: transparent;
 		}
 		
+		
 		#kezeles_gyorsmenu{
 			
 			
 		}
-		
 		
 		
 		#cegnev1{
@@ -651,7 +628,6 @@
 			
 			
 		}
-		
 		
 		
 		#cegnev2{
@@ -698,8 +674,6 @@
 			
 		}
 		
-		
-		
 		#cegnev4{
 			 background: linear-gradient(180deg, #BAE6FD 0%, #7DD3FC 20%, #38BDF8 50%, #00BFFF 100%);
 			-webkit-background-clip: text;
@@ -721,7 +695,6 @@
 			
 		}
 		
-		
 		#cegnev5{
 			background: linear-gradient(180deg, #FCD34D 0%, #FBBF24 30%, #B8860B 100%);
 			-webkit-background-clip: text;
@@ -740,10 +713,6 @@
 		
 		.reszletek{
 			padding: 18px;
-		}
-		
-		.reszletek a {
-			
 		}
 		
 		.reszletek a:hover{
@@ -801,7 +770,7 @@
 		.nyelv-lista li:hover {
 			background: #f2f2f2;
 		}
-
+		
 		.nyelv-lista img {
 			width: 26px;
 			display: block;
@@ -820,9 +789,10 @@
 			border-radius: 45%;
 		}
 		
+		
 		@media screen and (max-width:1725px){
 			.oldal{				
-				height: calc(95vh - 210px) !important;				
+				height: calc(95vh - 115px) !important;				
 			}
 			
 			#toltes_fomenu1{
@@ -839,29 +809,15 @@
 		
 			#fomenu{
 				gap: 12px;/*20px*/
-				height: 115px; /*120px*/
+				height: 115px;
 			}
-
 			.menupont{
-				height: 52px; /*55px*/
-				width: 140px;/*165px*/
+				height: 52px; 
+				width: 140px;
 				font-size: 1.2rem;/*1.4rem*/
 				
 			}
 			
-			#almenu{
-				height: 95px; /*100px*/
-				gap: 12px;/*20px*/
-				top: 115px; /*120px*/
-			}
-			
-			.al_menupont{
-				height: 52px; /*55px*/
-				width: content-fit;
-				padding: 5px 10px;
-				font-size: 1rem;/*1.2rem*/
-			}
-		
 			#cegnev{
 				font-size: 2.5rem; /*3rem*/
 				font-stretch: 125%;/*150%*/
@@ -871,7 +827,14 @@
 			h1{
 				font-size:1.8rem;
 			}
-
+			
+		
+			
+			.szolgaltatasok_item{
+				font-size: 1.00rem;/*1.05rem*/
+			}
+			
+			
 			#gyorsmenu{
 				padding: 9% 0%;/*10% 0%;*/
 				margin-left: -10%;
@@ -892,7 +855,7 @@
 		
 		@media screen and (max-width:1500px){
 			.oldal{				
-				height: calc(95vh - 1196px) !important;				
+				height: calc(95vh - 108px) !important;				
 			}
 			
 			#toltes_fomenu1{
@@ -923,18 +886,7 @@
 				font-size: 1rem;/*1.4rem*/
 				
 			}
-			
-			#almenu{
-				height: 88px; /*100px*/
-				top: 108px; /*120px*/
-			}
-			
-			.al_menupont{
-				height: 49px; /*55px*/
-				width: content-fit;
-				font-size: 0.8rem;/*1.2rem*/
-			}
-			
+						
 			h1{
 				font-size:1.6rem;
 			}
@@ -950,7 +902,19 @@
 				height:24%;
 				width: 100%;
 				padding: 0px 12%;	
-			}	
+			}
+			
+			#szolgaltatasok{				
+				grid-template-columns: 4% 92% 4%; /*5% 90 5*/
+			}
+			
+			.szolgaltatasok_item{
+				font-size: 0.85rem;/*1.05rem*/
+			}
+			
+			.szoveg{
+				padding: 5px 0px 5px 8px;
+			}
 			
 			#gyorsmenu{
 				padding: 8% 0%;/*10% 0%;*/
@@ -994,19 +958,7 @@
 				font-size: 0.8rem;/*1.4rem*/
 				
 			}
-			
-			
-			#almenu{
-				height: 82px; /*100px*/
-				top: 102px; /*120px*/
-			}
-			
-			.al_menupont{
-				height: 45px; /*55px*/
-				width: content-fit;
-				font-size: 0.6rem;/*1.2rem*/
-			}
-			
+				
 			h1{
 				font-size:1.4rem;
 			}
@@ -1016,6 +968,18 @@
 				height:24%;
 				width: 100%;
 				padding: 0px 12%;	
+			}
+			
+			#szolgaltatasok{				
+				grid-template-columns: 3% 90% 3%;
+			}
+			
+			.szolgaltatasok_item{
+				font-size: 0.75rem;/*1.05rem*/
+			}
+			
+			.szoveg{
+				padding: 5px 0px 5px 7px;
 			}
 			
 			#gyorsmenu{
@@ -1060,18 +1024,7 @@
 				font-size: 0.6rem;/*1.4rem*/
 				
 			}
-			
-			#almenu{
-				height: 82px; /*100px*/
-				top: 85px; /*120px*/
-			}
-			
-			.al_menupont{
-				height: 35px; /*55px*/
-				width: content-fit;
-				font-size: 0.5rem;/*1.2rem*/
-			}
-			
+					
 			h1{
 				font-size:1.2rem;
 			}
@@ -1082,6 +1035,19 @@
 				padding: 0px 12%;	
 			}
 			
+			#szolgaltatasok{
+				
+				grid-template-columns: 3% 90% 3%;
+			}
+			
+			.szolgaltatasok_item{
+				font-size: 0.75rem;/*1.05rem*/
+				/*font-size: 	0.35rem;1.05rem*/
+			}
+			
+			.szoveg{
+				padding: 5px 0px 5px 7px;
+			}
 			
 			#gyorsmenu{
 				padding: 5% 0%;/*10% 0%;*/
@@ -1098,7 +1064,20 @@
 				font-size: 1.4rem;
 				margin-top: 5px;
 			}
-
+			
+			#arAjanlat{
+				font-size: 1.9rem;
+				font-weight: 600;
+				cursor: pointer;
+				padding: 0 5%;
+			}
+		
+			#marCsak{
+				
+				margin-top: 12px;
+				display: inline-block;
+			}
+			
 			#uzenet_form {
 				gap: 12px; /*15px*/
 				margin-top: 72px;
@@ -1132,13 +1111,9 @@
 			}
 			
 			.oldal{				
-				height: calc(95vh - 196px) !important;				
+				height: calc(95vh - 108px) !important;				
 			}
 			
-			#oldaltoltes {
-				height: 196px;
-			}
-		
 			#toltes_fomenu1{
 				width: 20px;/*30px*/
 			}
@@ -1167,71 +1142,62 @@
 				font-size: 1rem;/*1.4rem*/
 				
 			}
-			
-			#almenu{
-				height: 88px; /*100px*/
-				top: 108px; /*120px*/
-			}
-			
-			.al_menupont{
-				height: 49px; /*55px*/
-				width: content-fit;
-				font-size: 0.8rem;/*1.2rem*/
-			}
-			
+						
 			h1{
 				font-size:1.6rem;
 			}
 			
-			.tartalom_feherHatter{
-				padding-top: 5%;
-				border-top: 0.5px solid gray;
-				font-size: 1.05rem;
+	
+			.szoveg{
+				padding: 2px 0px 2px 9px;
 			}
-			
-			.tartalom_szinesHatter{
-				padding-top: 5%;
-				border-top: 0.5px solid gray;
-				font-size: 1.05rem;
-			}
-			
-			
 		}
 		
 		@media screen and (max-height:900px){
 			#kapcsolat_felirat{
-				font-size: 1rem;
+				font-size: 1.2rem;
 				margin-top: 4px;
+			}
+			
+			#arAjanlat{
+				font-size: 1.7rem;
+				padding: 0 5%;
+			}
+		
+			#marCsak{
+				
+				margin-top: 2px;
+				display: inline-block;
 			}
 			
 			#uzenet_form {
 				gap: 7px; /*15px*/
-				margin-top: 25px;
-				max-width: 490px;
+				margin-top: 55px;
+				max-width: 525px;
 			}
 			
 			.form-group label {
 				margin-bottom: 5px;
 				font-weight: 800;
-				padding: 4.2px;
-				font-size: 0.75rem;/*1.1rem*/
+				padding: 5px;
+				font-size: 0.9rem;/*1.1rem*/
 			}		
 			
 			.form-group input[type="text"],
 			.form-group input[type="email"],
 			.form-group input[type="tel"],
 			.form-group textarea {
-				padding: 3.8px 7px;
-				font-size: 0.65rem;/*1rem*/
+				padding: 4px 7px;
+				font-size: 0.8rem;/*1rem*/
 			}
 			
 			.form-group textarea {
-				min-height: 120px;
+				min-height: 130px;
 				resize: vertical;
 			}
 		
 			#uzenet_form button {			
-				font-size: 0.75rem;/*1.1rem*/
+				font-size: 0.9rem;/*1.1rem*/
 				margin-top: 0px; /*10px*/
 			}
 			
@@ -1239,21 +1205,28 @@
 			h1{
 				font-size:1.4rem;
 			}
-
+			
+			#szolgaltatasok{
+				grid-template-columns: 12% 75% 12%;
+			}
+			
+			.szolgaltatasok_item{
+				font-size: 0.85rem;/*1.05rem*/
+			}
+			
 			.cim{
 				padding-top: 12px;
 				padding-left: 15px;
 				font-family: Bell MT;
 			}
 			
+			.szoveg{
+				padding: 2px 0px 2px 10px;
+			}
 			.oldal{				
-				height: calc(95vh - 180px) !important;				
+				height: calc(95vh - 100px) !important;				
 			}
 			
-			#oldaltoltes {
-				height: 180px;
-			}
-		
 			#logo img {
 				max-height: 85px;
 			}
@@ -1281,36 +1254,19 @@
 				
 			}
 			
-			#almenu{
-				height: 80px; /*100px*/
-				top: 100px; /*120px*/
-			}
-			
-			.al_menupont{
-				height: 45px; /*55px*/
-				width: content-fit;
-				font-size: 0.7rem;/*1.2rem*/
-			}
-			
-			
-			
-			kepek{
-				margin-top: -2px;
-			}
-			
-			
-			
 			#gmap{
 				margin-top: 0.5%; 
 			}
 			
 		}
+		
+		
 	</style>
 </head>
 <body>
 	<div id="fomenu"> 
 		<div id="logo"> <img src="logo_black.PNG" alt="egymásra csusztatott lakások"> </div>
-		<div id="cegnev">ST-Managment</div>
+		<div id="cegnev">ST-Management</div>
 		<div id="toltes_fomenu1"> </div>
 		<div id="fo_oldal" class="menupont" ><span style="font-family: Libre Baskerville;">Főoldal</span> </div>	
 		<div id="ign_kezeles" class="menupont">Ingatlan kezelés </div>
@@ -1337,131 +1293,86 @@
 
 	</div>
 	
-	<div id="almenu"> 
-		<div id="almenu1" class="al_menupont" >360° virtuális túrák</div>	
-		<div id="almenu2" class="al_menupont" >multiplatform</div>
-		<div id="almenu3" class="al_menupont" >vendégkommunikáció </div>
-		<div id="almenu4" class="al_menupont" >ároptimalizálás</div>
-		<div id="almenu5" class="al_menupont" >jogszabályi megfelelés </div>
-		<div id="almenu6" class="al_menupont" >ellenőrzések </div>
-		<div id="almenu7" class="al_menupont" >árajánlat </div>
-		<div id="almenu8" class="al_menupont" >kapcsolat </div>
+	
+	<div id="szolgaltatasok"> 
+	
 		
-	</div>
-	
-	<div id="oldaltoltes"> </div>
-	
-	<div id="tura_old" class="oldal feher1">
-	
-		<div id="felirat_tura_old" class="felirat_resz1"> 
-			<div id="a_felirat_tura_old" class="szinesfelirat_cl">	<h1>Professzionális fotózás és 360° virtuális túrák</h1> </div>
+		
+		<div id="ign_kezeles_szolg_fooldal" class="szolgaltatasok_item bal" >
+			<div id="szolg1_szoveg" class="szoveg">
+				<div id="szolg1_cim" class="cim"> <h1>Rövid távú kiadás hirdetése és kezelése</h1> </div>
+				<div id="szolg1_leiras" class="leiras">
+					Lakóingatlanok rövid távú, magas hozamot biztosító bérleményekké történő átalakítására irányuló szolgáltatásainkat úgy alakítottuk ki, hogy a lehető legnagyobb bevételt biztosítsák Önnek, miközben minimálisra csökkentjük a tulajdonosi teendőket!
+					<br> <span id="reszletek1" class="reszletek" ><a>további részletek ➾ </a></span>
+				</div>
+			</div>
+			<div id="szolg1_kep" class="kep"> 
+				<img src="" alt="kép1">
+			</div>
 		</div>
 		
-		<div class="tobbi_resz1" >
-			
-			<div id="leiras_tura_old" class="tartalom_feherHatter">				
-				A rövidtávú kiadásnál a vizuális megjelenés döntő a foglalásoknál. Professzionális fotókkal és 360°-os virtuális túrákkal kiemeljük az ingatlan értékeit, növeljük a bizalmat és az elköteleződést, így hatékonyan növelve a foglalások számát. Megoldásaink kifejezetten a rövidtávú piaci igényekre szabottak, mérhető üzleti eredményekkel.
+		<div id="ign_kivitelezes_szolg_fooldal" class="szolgaltatasok_item jobb">
+			<div id="szolg2_szoveg" class="szoveg">
+				<div id="szolg2_cim" class="cim"> <h1>Kivitelezés és felújítás</h1> </div>
+				<div id="szolg2_leiras" class="leiras">
+					Akár kiadásra készíti elő ingatlanát, akár egy régebbi épület korszerűsítését tervezi,<br>tapasztalt kivitelező csapatunk teljes körű átalakítást kínál!
+					<br> <span id="reszletek2" class="reszletek" ><a>további részletek ➾ </a></span>
+				</div>
 			</div>
-			
-			<div id="kep1" class="kepek"> 	
+			<div id="szolg2_kep" class="kep"> 
+				<img src="" alt="kép2">
 			</div>
-			
 		</div>
 		
-	</div>
-	
-	
-	<div id="multiplatform_old" class="oldal szines"> 	
-		<div id="felirat_multiplat_old" class="felirat_resz"> 
-			<div id="a_felirat_multiplat_old" class="feherfelirat_cl">	<h1>Multiplatform alapú hirdetés</h1> </div>
+		<div id="ign_okosotthon_szolg_fooldal" class="szolgaltatasok_item bal">
+			<div id="szolg3_szoveg" class="szoveg">
+				<div id="szolg3_cim" class="cim"> <h1>Okosotthon megoldások</h1> </div>
+				<div id="szolg3_leiras" class="leiras">
+					Emelje ingatlanát a következő szintre modern okostechnológiákkal, amelyek kényelmesebbé,
+					<br>biztonságosabbá és hatékonyabbá teszik a működtetést!
+					<br> <span id="reszletek3" class="reszletek" ><a>további részletek ➾ </a></span>
+				</div>
+			</div>
+			<div id="szolg3_kep" class="kep"> 
+				<img src="" alt="kép3">
+			</div>
 		</div>
 		
-		<div class="tobbi_resz" >
-			<div id="leiras_multiplat_old" class="tartalom_szinesHatter" style="color:white">				
-				Ingatlanát a legnépszerűbb rövid távú bérleti platformokon hirdetjük, beleértve az Airbnb-t, a Booking.com-ot és más kiemelt oldalakat. Minden platformon professzionális, vonzó és naprakész hirdetést készítünk, amely kiemeli az ingatlan előnyeit és növeli az érdeklődők számát. Ezzel a megközelítéssel maximalizáljuk a láthatóságot és a foglaltságot, így Ön a lehető legnagyobb bevételt érheti el az ingatlan bérbeadásából.
+		<div id="ign_takaritás_szolg_fooldal" class="szolgaltatasok_item jobb"> 
+			<div id="szolg4_szoveg" class="szoveg">
+				<div id="szolg4_cim" class="cim"> <h1>Takarítás és mosás</h1> </div>
+				<div id="szolg4_leiras" class="leiras">
+					A tisztaság alapvető fontosságú a vendégek elégedettsége és a pozitív értékelések szempontjából.
+					<br>Saját takarító- és mosodai szolgáltatásunkkal minden ingatlan megfelel a professzionális vendéglátóipari normáknak!
+					<br> <span id="reszletek4" class="reszletek" ><a>további részletek ➾ </a></span>
+				</div>
 			</div>
-			
-			<div id="kep2" class="kepek"> 	
-			</div>			
-		</div>
-	</div>
-	
-	<div id="vendegkommunikacio_old" class="oldal feher"> 	
-		<div id="felirat_vendeg_old" class="felirat_resz"> 
-			<div id="a_felirat_vendeg_old" class="szinesfelirat_cl">	<h1>Többnyelvű vendégkommunikáció és támogatás</h1> </div>
-		</div>
-		
-		<div class="tobbi_resz" >
-			
-			<div id="leiras_vendeg_old" class="tartalom_feherHatter">				
-				A vendégekkel való teljes körű kapcsolattartást több nyelven biztosítjuk, a foglalástól a távozásig. Kezeljük a bejelentkezést, a tartózkodás alatti kommunikációt és az esetleges kérdések vagy problémák gyors megoldását. A bérbeadók számára időmegtakarítást, a vendégeknek pedig zökkenőmentes, professzionális élményt jelent.
+			<div id="szolg4_kep" class="kep"> 
+				<img src="" alt="kép4">
 			</div>
-			
-			<div id="kep3" class="kepek"> 	
-			</div>
-			
-		</div>
-	</div>
-	
-	<div id="aroptimalizálás_old" class="oldal szines">
-		<div id="felirat_aropti_old" class="felirat_resz"> 
-			<div id="a_felirat_aropti_old" class="feherfelirat_cl">	<h1>Dinamikus árazás és foglalási naptár optimalizálása</h1> </div>
 		</div>
 		
-		<div class="tobbi_resz" >
-			
-			<div id="leiras_aropti_old" class="tartalom_szinesHatter" style="color:white">				
-				Folyamatosan figyeljük a piaci keresletet, a foglaltsági adatokat és a versenytársak árazását, hogy naprakész információk alapján hozzuk meg döntéseinket. Valós időben módosítjuk az árakat, alkalmazkodva a szezonális ingadozásokhoz, eseményekhez és egyéb piaci tényezőkhöz. Ez lehetővé teszi, hogy a bevételt optimalizáljuk, miközben a vendégek számára is vonzó és versenyképes árazást biztosítunk.
+		<div id="ign_tanacsadas_szolg_fooldal" class="szolgaltatasok_item bal"> 
+			<div id="szolg5_szoveg" class="szoveg">
+				<div id="szolg5_cim" class="cim"> <h1>Ingatlan tanácsadás</h1> </div>
+				<div id="szolg5_leiras" class="leiras">
+					A magyar ingatlanpiacon való eligazodás kihívást jelenthet – ebben nyújtunk személyre szabott segítséget 
+					<br>befektetőknek, tulajdonosoknak és vásárlóknak egyaránt.
+					<br> <span id="részletek5" class="reszletek"><a>további részletek ➾ </a></span>
+				</div>
 			</div>
-			
-			<div id="kep4" class="kepek"> 	
+			<div id="szolg5_kep" class="kep"> 
+				<img src="" alt="kép5">
 			</div>
-			
-		</div>
-	</div>
-	
-	<div id="jogszabalyMegfel_old" class="oldal feher"> 
-		<div id="felirat_jogsz_old" class="felirat_resz"> 
-			<div id="a_felirat_jogsz_old" class="szinesfelirat_cl">	<h1>Jogszabályi megfelelés</h1> </div>
-		</div>
-		
-		<div class="tobbi_resz" >
-			
-			<div id="leiras_jogsz_old" class="tartalom_feherHatter">				
-				Mi teljes körűen gondoskodunk a vendégek regisztrációjáról, biztosítva a pontos és jogszerű adminisztrációt. Kezeljük az adózási kötelezettségeket, garantálva a hatályos előírásoknak való megfelelést, így Önnek nem kell a részletekkel foglalkoznia. Emellett folyamatosan ellenőrizzük, hogy az ingatlan minden törvényi és szabályozási követelménynek megfeleljen, biztosítva ezzel a szabályos üzemeltetést.
-			</div>
-			
-			<div id="kep5" class="kepek"> 	
-			</div>
-			
-		</div>
-	</div>
-	
-	<div id="ellenorzesek_old" class="oldal szines">
-		<div id="felirat_ellenorzesek_old" class="felirat_resz"> 
-			<div id="a_felirat_ellenorzesek_old" class="feherfelirat_cl">	<h1>Rendszeres karbantartás és ellenőrzések</h1> </div>
-		</div>
-		
-		<div class="tobbi_resz" >
-			
-			<div id="leiras_ellenorzesek_old" class="tartalom_szinesHatter" style="color:white">				
-				A folyamatos állapotmegőrzés kiemelt jelentőségű az ingatlan hosszú távú értékének és a vendégek elégedettségének biztosításában. Rendszeresen ütemezett karbantartásokat és részletes ellenőrzéseket végzünk, hogy minden berendezés és infrastruktúra tökéletesen működjön. Ezzel garantáljuk, hogy az ingatlan mindig kifogástalan állapotban legyen, maximális komfortot és biztonságot nyújtva a bérlőknek, miközben Ön nyugodtan számíthat a problémamentes üzemeltetésre.
-			</div>
-			
-			<div id="kep6" class="kepek"> 	
-			</div>
-			
 		</div>
 	</div>
 	
 	
-	
-	
-	<div id="uzenet_iras" class="oldal "> 
+	<div id="uzenet_iras" class="oldal"> 
 		<div id="kapcsolat_felirat"> 
-			<h1>Árajánlat kérés</h1>
-			
-			<span style="backdrop-filter: blur(15px);border: 1px solid rgba(255, 255, 255, 0.2);box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);">Már csak néhány kattintásra vagy a megoldástól ! </span>
+			<span id="arAjanlat">Árajánlat kérés</span>
+			<br>
+			<span id="marCsak">Már csak néhány kattintásra vagy a megoldástól ! </span>
 		</div>
 		
 		<div id="formehelye"> 
@@ -1498,6 +1409,7 @@
 	
 	<div id="kapcsolat" class="oldal"> 
 		
+			
 			
 			<div id="gyorsmenu"> 
 				 <div id="kezeles_gyorsmenu" class="gyorsmenupont"> 
@@ -1561,7 +1473,117 @@
 	</div>
 	
 <script>
-
+		const parok = [
+			{
+			  szolg: "ign_okosotthon_szolg_fooldal",
+			  menu: "ign_okosotthon",
+			  color: "darkred",
+			  background: "radial-gradient(90% 70% at 50% 50%, rgba(230, 90, 90, 0.32), transparent 70%), linear-gradient(180deg, #1c0404 0%, #2a0b0b 50%, #1c0404 100%)"
+			},
+			{
+			  szolg: "ign_takaritás_szolg_fooldal",
+			  menu: "ign_takaritás",
+			  color: "deepskyblue",
+			  background: "radial-gradient(95% 75% at 50% 50%, rgba(140, 200, 255, 0.32), transparent 72%), linear-gradient(180deg, #0f2338 0%, deepskyblue 50%, #0b1829 100%)"
+			},
+			{
+			  szolg: "ign_tanacsadas_szolg_fooldal",
+			  menu: "ign_tanacsadas",
+			  color: "gold",
+			  background: "radial-gradient(90% 70% at 50% 50%, rgba(250, 210, 80, 0.32), transparent 70%), linear-gradient(180deg, #4a390e 0%, #5a4310 50%, #4a390e 100%)"
+			},
+			{
+			  szolg: "ign_kezeles_szolg_fooldal",
+			  menu: "ign_kezeles",
+			  color: "blue",
+			  background: "radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%), linear-gradient(180deg, #050c1c 0%, #07142b 50%, #050c1c 100%)"
+			},
+			{
+			  szolg: "ign_kivitelezes_szolg_fooldal",
+			  menu: "ign_kivitelezes",
+			  color: "green",
+			  background: "radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%), linear-gradient(180deg, #06160d 0%, #0b2a16 50%, #06160d 100%)"
+			}
+		];
+		
+		const reszletekHivat = [
+			"reszletek1","reszletek2", "reszletek3", "reszletek4", "reszletek5"
+		]
+		
+		const linkek=[
+		{
+			azon:"fo_oldal",
+			destinat:"index.html"
+		},
+		{
+			azon:"ign_kezeles",
+			destinat:"kezeles.html"
+		},
+		{
+			azon:"reszletek1",
+			destinat:"kezeles.html"
+		},
+		{
+			azon:"kezeles_gyorsmenu",
+			destinat:"kezeles.html"
+		},		
+		{
+			azon:"ign_kivitelezes",
+			destinat:"kivitelezes.html"
+		},
+		{
+			azon:"reszletek2",
+			destinat:"kivitelezes.html"
+		},
+		{
+			azon:"kivitelezes_gyorsmenu",
+			destinat:"kivitelezes.html"
+		},
+		
+		{
+			azon:"ign_okosotthon",
+			destinat:"okosotthon.html"
+		},
+		{
+			azon:"reszletek3",
+			destinat:"okosotthon.html"
+		},
+		{
+			azon:"okosotthon_gyorsmenu",
+			destinat:"okosotthon.html"
+		},
+		
+		{
+			azon:"ign_takaritás",
+			destinat:"takaritas.html"
+		},
+		{
+			azon:"reszletek4",
+			destinat:"takaritas.html"
+		},
+		{
+			azon:"takaritás_gyorsmenu",
+			destinat:"takaritas.html"
+		},
+		
+		{
+			azon:"ign_tanacsadas",
+			destinat:"tanacsadas.html"
+		},
+		{
+			azon:"reszletek5",
+			destinat:"tanacsadas.html"
+		},
+		{
+			azon:"tanacsadas_gyorsmenu",
+			destinat:"tanacsadas.html"
+		}
+		];
+		let aktualisIndex = 0;
+		let intervalId = null;
+		let szunetel = false;
+		let hoverIndex = null;
+		
 		const nyelv = document.querySelector('.nyelv-valaszto');
 		const toggle = document.getElementById('nyelvToggle');
 
@@ -1575,144 +1597,119 @@
 			}
 		});
 		
-		const linkek=[
-			{
-				azon:"fo_oldal",
-				destinat:"index.html"
-			},
-			{
-				azon:"ign_kezeles",
-				destinat:"kezeles.html"
-			},
-			{
-				azon:"reszletek1",
-				destinat:"kezeles.html"
-			},
-			{
-				azon:"kezeles_gyorsmenu",
-				destinat:"kezeles.html"
-			},		
-			{
-				azon:"ign_kivitelezes",
-				destinat:"kivitelezes.html"
-			},
-			{
-				azon:"reszletek2",
-				destinat:"kivitelezes.html"
-			},
-			{
-				azon:"kivitelezes_gyorsmenu",
-				destinat:"kivitelezes.html"
-			},
-			
-			{
-				azon:"ign_okosotthon",
-				destinat:"okosotthon.html"
-			},
-			{
-				azon:"reszletek3",
-				destinat:"okosotthon.html"
-			},
-			{
-				azon:"okosotthon_gyorsmenu",
-				destinat:"okosotthon.html"
-			},
-			
-			{
-				azon:"ign_takaritás",
-				destinat:"takaritas.html"
-			},
-			{
-				azon:"reszletek4",
-				destinat:"takaritas.html"
-			},
-			{
-				azon:"takaritás_gyorsmenu",
-				destinat:"takaritas.html"
-			},
-			
-			{
-				azon:"ign_tanacsadas",
-				destinat:"tanacsadas.html"
-			},
-			{
-				azon:"reszletek5",
-				destinat:"tanacsadas.html"
-			},
-			{
-				azon:"tanacsadas_gyorsmenu",
-				destinat:"tanacsadas.html"
-			}
-		];
-		
-		// Store offset globally
-		let fixedOffset = 220;
-
-		// Function to calculate and update fixedOffset
-		function updateFixedOffset() {
-			const fomenu = document.getElementById('fomenu');
-			const almenu = document.getElementById('almenu');
-			
-			if (fomenu && almenu) {
-				fixedOffset = fomenu.offsetHeight + almenu.offsetHeight;
-			} else {
-				fixedOffset = 220; // Fallback
-			}
-		}
+		window.addEventListener('load', function() {
+  const ta = document.getElementById('uzenet');
+  if (ta) {
+	ta.value = 'monitor height: ' + window.innerHeight + 'px' + '  |  monitor width: ' + window.innerWidth + 'px';
+  }
+});
 
 		window.onload = function () {
-			// Calculate initial offset
-			updateFixedOffset();
-
-			linkek.forEach(l => {
-				const element = document.getElementById(l.azon);
-				if (element) {
-					element.addEventListener('click', function() {
-						window.location.href = l.destinat;
-					});
-				}
-			});
-
-			document.querySelectorAll(".al_menupont").forEach(item => {
-				item.addEventListener("click", () => {
-					const targetId = menuToSection[item.id];
-					const target = document.getElementById(targetId);
-
-					if (!target) return;
-
-					// Use the stored offset (updated on resize)
-					const y = target.getBoundingClientRect().top + window.pageYOffset - fixedOffset;
-
-					window.scrollTo({
-						top: y,
-						behavior: "smooth"
-					});
+			initHover();
+			inditValtakozas();
+			
+			linkek.forEach(l=>{
+				document.getElementById(l.azon).addEventListener('click', function(){
+					window.location.href=l.destinat
 				});
 			});
+			
+			
+			
 		};
 
-		// Update offset on every window resize
-		window.addEventListener('resize', function() {
-			updateFixedOffset();
-		});
+		function resetAll() {
+			parok.forEach(p => {
+			document.getElementById(p.szolg).style.transform = "scale(1)";
+			const menu = document.getElementById(p.menu);
+			const foOld = document.getElementById("fo_oldal");
+			 menu.style.color = "gray";
+			 menu.style.fontWeight = "300";
+			 menu.style.background = "transparent";
+			 foOld.style.color = "black";
+			 foOld.style.fontWeight = "600";
+			 foOld.style.borderTop= "solid black";
+			 foOld.style.borderBottom= "solid black";
+			});
+		}
 
-		const menuToSection = {
-			almenu1: "tura_old",
-			almenu2: "multiplatform_old",
-			almenu3: "vendegkommunikacio_old",
-			almenu4: "aroptimalizálás_old",
-			almenu5: "jogszabalyMegfel_old",
-			almenu6: "ellenorzesek_old",
-			almenu7: "uzenet_iras",
-			almenu8: "kapcsolat"
-		  };
-
-		  // FIX fejléc magasság (fomenu 120 + almenu 100)
-		  
+		function kiemel(index) {
+			resetAll();
+			const p = parok[index];
+			document.getElementById(p.szolg).style.transform = "scale(1.04)";
+			document.getElementById(p.menu).style.color = "black";
+			document.getElementById(p.menu).style.fontWeight = "600";
+		}
 	
+		function inditValtakozas() {
+			kiemel(aktualisIndex);
+
+			intervalId = setInterval(() => {
+			if (!szunetel) {
+				aktualisIndex = (aktualisIndex + 1) % parok.length;
+				kiemel(aktualisIndex);
+			}
+			}, 7000);
+		}
+
+		function initHover() {
+			parok.forEach((p, index) => {
+			const menuElem = document.getElementById(p.menu);
+
+			menuElem.addEventListener("mouseenter", () => {
+			szunetel = true;
+			hoverIndex = index;
+			resetAll();
+
+			  
+			menuElem.style.background = p.background;
+			menuElem.style.color = "white";
+			});
+
+			menuElem.addEventListener("mouseleave", () => {
+				szunetel = false;
+
+				aktualisIndex = (hoverIndex + 1) % parok.length;
+				hoverIndex = null;
+
+				resetAll();
+				kiemel(aktualisIndex);
+				});
+			});
+			
+			 reszletekHivat.forEach((reszletekId, index) => {
+				const reszletekElem = document.getElementById(reszletekId);
+				if (reszletekElem) {
+					const p = parok[index]; // Match with corresponding parok item
+					
+					reszletekElem.addEventListener("mouseenter", () => {
+						szunetel = true;
+						hoverIndex = index;
+						resetAll();
+						
+						
+					});
+
+					reszletekElem.addEventListener("mouseleave", () => {
+						szunetel = false;
+						aktualisIndex = (hoverIndex + 1) % parok.length;
+						hoverIndex = null;
+						resetAll();
+						kiemel(aktualisIndex);
+					});
+        }
+    });
+			
+			
+			
+		}
+		
+		
+		
 </script>
 
 </body>
 </html>
+
 
 
