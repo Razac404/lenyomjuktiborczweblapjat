@@ -175,6 +175,15 @@
 			animation: bounce 2s infinite;
 		}
 
+		#arrowV:hover {
+			border-top-color: #ffffff; /* Pure white - maximum sharpness */
+			border-top-width: 22px; /* Slightly thicker */
+			border-left-width: 16px;
+			border-right-width: 16px;
+			
+			filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+			transition: all 0.3s ease;
+		}
 		
 				
 		
@@ -1818,7 +1827,7 @@
 		const target = document.getElementById('szolgaltatasok');
 		const fomenu = document.getElementById('fomenu');
 		const fomenuHeight = fomenu.offsetHeight;
-		const targetPosition = target.offsetTop - fomenuHeight;
+		const targetPosition = target.offsetTop - fomenuHeight + 1;
 		
 		window.scrollTo({
 			top: targetPosition,
