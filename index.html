@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>_ST-Management</title>
+	<title>ST-Management</title>
 	<style>
 	
 		*{
@@ -36,8 +36,8 @@
 			
 			/*background: radial-gradient(ellipse at center, #fcfcfc 0%, #e8e8e8 100%);*/
 			
-			background: linear-gradient(180deg, #fdfbf8 0%, #f3efe9 100%);
-
+			transition: background 0.5s ease-in-out, background-color 0.5s ease-in-out;
+			
 
 		}
 		
@@ -50,11 +50,14 @@
 		}
 		#logo{
 			margin-left: -40px;
+			opacity: 0;
 		}
 		
 		#logo img {
 			max-height: 100px;
 			width: auto;
+			
+			transition: opacity 0.5s ease-in-out;
 		}
 		
 		#cegnev{
@@ -62,7 +65,7 @@
 			Bell MT;
 			font-weight: 500;
 			font-stretch: 150%;
-			
+			color: transparent;
 		}
 		
 		#toltes_fomenu1{
@@ -83,9 +86,11 @@
 			align-items: center;
 			justify-content: center;
 			cursor: pointer;
-			color:gray;
+			/*color:gray;*/
 			border-radius: 20px;
 			transition: color 0.6s ease-in-out;
+			color: #f2f2ee;
+
 		}
 		
 
@@ -107,7 +112,6 @@
 			overflow: hidden; /* clips the excess */
 		}
 		
-				
 		
 		
 		.oldal{
@@ -117,14 +121,71 @@
 			overflow: hidden; /* hogy semmi ne lógjon túl */
 		}
 		
+
+		.video-container {
+		  position: relative;
+		  width: 100%;
+		  height: 95vh;
+		  overflow: hidden;
+		}
+
+		.video-container video {
+		  position: absolute;
+		  inset: 0;
+		  width: 100%;
+		  height: 100%;
+		  object-fit: cover;
+		}
+		
+		.overlay {
+			position: absolute;
+			inset: 0;
+			z-index: 2;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			pointer-events: none;
+			font-size: 5rem;
+			background-color: rgba(0, 0, 0, 0.5); /* 50% fekete */
+			
+			
+			color: rgba(255, 255, 255, 0.8); /* 80% opacity - less strong */
+
+		}
+		
+		.overlay img{
+			height: 25%;
+			width: 10%;
+			opacity: 0.8;
+		}
+		
+		#arrowV {
+			position: absolute;
+			top: 65%; /* 50% (middle) + 5% = 55% */
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 3;
+			width: 0;
+			height: 0;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-top: 20px solid rgba(255, 255, 255, 0.8);
+			cursor: pointer;
+			pointer-events: auto;
+			animation: bounce 2s infinite;
+		}
+
+		
+				
+		
 		#szolgaltatasok{
 			display: grid;
 			grid-template-columns: 10% 80% 10%;
-			
+			padding-top: 2vh;
 			color:white;
 			grid-template-rows: 20% 20% 20% 20% 20%;
-			height: 95vh;
-			padding-top: 120px;
+			
+			
 		}
 		
 		
@@ -722,6 +783,7 @@
 		.nyelv-valaszto {
 			position: relative;
 			width: 44px;
+			opacity: 0;
 		}
 
 		.nyelv-aktiv {
@@ -1293,8 +1355,22 @@
 
 	</div>
 	
+	<div id="nyito_oldal" class="video-container">
+		<video autoplay loop muted playsinline preload="auto">
+			<source src="st_b_Video.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+		<div class="overlay">
+			<img src="logo_white.png.PNG" alt="egymásra csusztatott lakások">
+			ST-Management
+			
+		</div>
+		<div id="arrowV"> </div>
+	</div>
 	
-	<div id="szolgaltatasok"> 
+	
+	
+	<div id="szolgaltatasok" class="oldal"> 
 	
 		
 		
@@ -1585,6 +1661,7 @@
 		let hoverIndex = null;
 		
 		const nyelv = document.querySelector('.nyelv-valaszto');
+		const menupontElements = document.querySelectorAll('.menupont');
 		const toggle = document.getElementById('nyelvToggle');
 
 		toggle.addEventListener('click', () => {
@@ -1598,26 +1675,57 @@
 		});
 		
 		window.addEventListener('load', function() {
-  const ta = document.getElementById('uzenet');
-  if (ta) {
-	ta.value = 'monitor height: ' + window.innerHeight + 'px' + '  |  monitor width: ' + window.innerWidth + 'px';
-  }
-});
+	  const ta = document.getElementById('uzenet');
+	  if (ta) {
+		ta.value = 'monitor height: ' + window.innerHeight + 'px' + '  |  monitor width: ' + window.innerWidth + 'px';
+	  }
+	});
 
 		window.onload = function () {
-			initHover();
-			inditValtakozas();
-			
+
 			linkek.forEach(l=>{
 				document.getElementById(l.azon).addEventListener('click', function(){
 					window.location.href=l.destinat
 				});
 			});
-			
-			
-			
-		};
 
+		};
+		
+		window.addEventListener('scroll', function() {
+			const fomenu = document.getElementById('fomenu');
+			const logo = document.getElementById('logo');
+			const cegnev = document.getElementById('cegnev');
+			const fo_oldal = document.getElementById('fo_oldal');
+			if (fomenu) {
+				if (window.scrollY === 0) { // Change after 100px scroll
+					if (intervalId) {
+						clearInterval(intervalId);
+						intervalId = null;
+					}
+					// Reset to initial state
+					
+					fomenu.style.background = 'transparent';
+					logo.style.opacity=0;
+					nyelv.style.opacity=0;
+					cegnev.style.color='transparent';
+					fo_oldal.style.borderTop= 'none';
+					fo_oldal.style.borderBottom= 'none';
+					menupontElements.forEach(element => {element.style.color = 'white';});
+				} 
+				else {
+					if (!intervalId && !szunetel) { 
+						inditValtakozas();
+					}
+					fomenu.style.background = 'linear-gradient(180deg, #fdfbf8 0%, #f3efe9 100%)';
+					logo.style.opacity=1;
+					nyelv.style.opacity=1;
+					cegnev.style.color='black';
+					menupontElements.forEach(element => {element.style.color = 'black';});
+
+				}
+			}
+		});
+		
 		function resetAll() {
 			parok.forEach(p => {
 			document.getElementById(p.szolg).style.transform = "scale(1)";
@@ -1651,7 +1759,7 @@
 			}
 			}, 7000);
 		}
-
+			
 		function initHover() {
 			parok.forEach((p, index) => {
 			const menuElem = document.getElementById(p.menu);
@@ -1704,7 +1812,18 @@
 			
 		}
 		
+		// Scroll to szolgaltatasok when arrowV is clicked (accounting for fixed menu height)
+	document.getElementById('arrowV').addEventListener('click', function() {
+		const target = document.getElementById('szolgaltatasok');
+		const fomenu = document.getElementById('fomenu');
+		const fomenuHeight = fomenu.offsetHeight;
+		const targetPosition = target.offsetTop - fomenuHeight;
 		
+		window.scrollTo({
+			top: targetPosition,
+			behavior: 'smooth'
+		});
+	});
 		
 </script>
 
