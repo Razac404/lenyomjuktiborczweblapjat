@@ -58,8 +58,8 @@
 			z-index:999;
 			top: 120px;
 			background:
-				radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%),
-				linear-gradient(180deg, #050c1c 0%, #07142b 50%, #050c1c 100%);
+				radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%),
+				linear-gradient(180deg, #06160d 0%, #0b2a16 50%, #06160d 100%);
 			color: white;
 			
 		}
@@ -145,7 +145,7 @@
 		}
 		
 				
-		#ign_kezeles{
+		#ign_kezeles:hover{
 			
 			background:
 				radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%),
@@ -161,7 +161,7 @@
 			font-weight: 600;
 		}
 		
-		#ign_kivitelezes:hover{
+		#ign_kivitelezes{
 			background:
 				radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%),
 				linear-gradient(180deg, #06160d 0%, #0b2a16 50%, #06160d 100%);
@@ -213,9 +213,8 @@
 			display: grid;
 			grid-template-columns: 50% 50%;
 			grid-template-rows: 100%;
-			background: linear-gradient(to right, black, blue);
-			  -webkit-background-clip: text;
-			  -webkit-text-fill-color: transparent;
+			
+			color: black;
 		}
 		
 		.feher{
@@ -234,8 +233,8 @@
 			grid-template-rows: 100%;
 			color: white;
 			background:
-				radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%),
-				linear-gradient(180deg, white 0%, #050c1c 5%, #07142b 50%, #050c1c 100%);
+				radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%),
+				linear-gradient(180deg, white 0%, #06160d 5%, #0b2a16 50%, #06160d 100%);
 			
 		}
 		
@@ -282,9 +281,10 @@
 			font-size: 1.2rem;
 			text-align: center;
 			
-			background: linear-gradient(to bottom right, #043fb8 0%, #083fa8 10%, #0d3c94 20%, #12367d 40%, #0f3a8c 50%, #0b347a 60%, #082e68 70%, #07285a 80%, #06224d 90%, #051c40 100%);
-			  -webkit-background-clip: text;
-			  -webkit-text-fill-color: transparent;
+			/*background: linear-gradient(to bottom right, #22c55e 0%, #16a34a 10%, #15803d 20%, #166534 40%, #15803d 50%, #14532d 60%, #14532d 70%, #0f4222 80%, #0a2e1a 90%, #051c0f 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;*/
+			color: black;
 			letter-spacing: 0.1em;
 		}
 		
@@ -350,9 +350,9 @@
 		.szinesfelirat_cl{
 			border-top: solid 1.5px;
 			padding-top: 5%;
-			background: linear-gradient(to bottom right, #055cf7 0%, #105ce3 10%, #1759cf 20%, #1d53b3 40%, #055cf7 50%, #105ce3 60%, #1759cf 70%, #1d53b3 80%,#1d4a99 90%, #1a3e7d 100% );
-			  -webkit-background-clip: text;
-			  -webkit-text-fill-color: transparent;
+			background: linear-gradient(to bottom right, #22c55e 0%, #20b855 10%, #1ea84d 20%, #1a9543 40%, #22c55e 50%, #20b855 60%, #1ea84d 70%, #1a9543 80%, #16803a 90%, #126b32 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
 		}
 		
 		
@@ -371,10 +371,12 @@
 		#uzenet_iras{
 			display:grid;
 			grid-template-columns: 10% 80% 10%;
-			grid-template-rows: 10% 89% 1%;
-			background-image: url('contact_bckgrnd.jpg');
+			grid-template-rows: 10% 85% 5%;
+			/*background-image: url('greenKapcsolat3.jpg');*/
 			background-size:cover;
 			background-position: center;
+			color: white;
+			padding-top: 2%;
 		}
 		
 		#kapcsolat_felirat{
@@ -421,7 +423,8 @@
 			padding: 5px;
 			border-radius: 3px;
 			width:auto;
-			font-size: 1.1rem;
+			font-size: 1.1rem ;
+			
 		}
 		
 		::placeholder {
@@ -441,15 +444,15 @@
 		}
 		
 		.form-group textarea {
-			min-height: 155px;
+			min-height: 145px;
 			resize: vertical;
 		}
 		
 		#uzenet_form button {
 			padding: 12px 30px;
 			background:
-				radial-gradient(90% 70% at 50% 50%, rgba(80, 150, 240, 0.32), transparent 70%),
-				linear-gradient(180deg, #050c1c 0%, #07142b 50%, #050c1c 100%);
+				radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%),
+				linear-gradient(180deg, #06160d 0%, #0b2a16 50%, #06160d 100%);	
 			color: white;
 			border: none;
 			border-radius: 5px;
@@ -459,9 +462,7 @@
 		}
 		
 		#uzenet_form button:hover {
-			background:
-				radial-gradient(90% 70% at 50% 50%, rgba(120, 180, 255, 0.45), transparent 70%),
-				linear-gradient(180deg, #0a1b3f 0%, #0f2a5a 50%, #0a1b3f 100%);
+			background: linear-gradient(to bottom right, #22c55e 0%, #20b855 10%, #1ea84d 20%, #1a9543 40%, #22c55e 50%, #20b855 60%, #1ea84d 70%, #1a9543 80%, #16803a 90%, #126b32 100%);
 		}
 		
 		#uzenet_form button:hover {
@@ -470,7 +471,7 @@
 		
 		
 		#kapcsolat{
-			background-image: url('contack_bckgrnd4.jpeg');
+			background-image: url('zold.png');
 			background-size:cover;
 			background-position: right;
 			display:grid;
@@ -1101,7 +1102,7 @@
 
 			#uzenet_form {
 				gap: 12px; /*15px*/
-				margin-top: 72px;
+				margin-top: 45px;
 				max-width: 555px;
 				
 			}
@@ -1109,8 +1110,8 @@
 			.form-group label {
 				margin-bottom: 5px;
 				font-weight: 800;
-				padding: 8px;
-				font-size: 1rem;/*1.1rem*/
+				padding: 6px;
+				font-size: 0.9rem;/*1.1rem*/
 			}		
 			
 			.form-group input[type="text"],
@@ -1118,16 +1119,16 @@
 			.form-group input[type="tel"],
 			.form-group textarea {
 				padding: 5px 8px;
-				font-size: 0.9rem;/*1rem*/
+				font-size: 0.8rem;/*1rem*/
 			}
 			
 			.form-group textarea {
-				min-height: 175px;
+				min-height: 155px;
 				resize: vertical;
 			}
 		
 			#uzenet_form button {			
-				font-size: 1rem;/*1.1rem*/
+				font-size: 0.9rem;/*1.1rem*/
 				margin-top: 0px; /*10px*/
 			}
 			
@@ -1207,7 +1208,7 @@
 			#uzenet_form {
 				gap: 7px; /*15px*/
 				margin-top: 25px;
-				max-width: 490px;
+				max-width: 470px;
 			}
 			
 			.form-group label {
@@ -1230,7 +1231,8 @@
 				resize: vertical;
 			}
 		
-			#uzenet_form button {			
+			#uzenet_form button {
+				padding: 9px 30px;
 				font-size: 0.75rem;/*1.1rem*/
 				margin-top: 0px; /*10px*/
 			}
@@ -1338,15 +1340,14 @@
 	</div>
 	
 	<div id="almenu"> 
-		<div id="almenu1" class="al_menupont">360° Virtual Tours</div>	
-		<div id="almenu2" class="al_menupont">Multiplatform</div>
-		<div id="almenu3" class="al_menupont">Guest Communication</div>
-		<div id="almenu4" class="al_menupont">Price Optimization</div>
-		<div id="almenu5" class="al_menupont">Regulatory Compliance</div>
-		<div id="almenu6" class="al_menupont">Inspections</div>
-		<div id="almenu7" class="al_menupont">Request a Quote</div>
-		<div id="almenu8" class="al_menupont">Contact</div>
-
+		<div id="almenu1" class="al_menupont" >360° virtuális túrák</div>	
+		<div id="almenu2" class="al_menupont" >multiplatform</div>
+		<div id="almenu3" class="al_menupont" >vendégkommunikáció </div>
+		<div id="almenu4" class="al_menupont" >ároptimalizálás</div>
+		<div id="almenu5" class="al_menupont" >jogszabályi megfelelés </div>
+		<div id="almenu7" class="al_menupont" >árajánlat </div>
+		<div id="almenu8" class="al_menupont" >kapcsolat </div>
+		
 	</div>
 	
 	<div id="oldaltoltes"> </div>
@@ -1354,13 +1355,13 @@
 	<div id="tura_old" class="oldal feher1">
 	
 		<div id="felirat_tura_old" class="felirat_resz1"> 
-			<div id="a_felirat_tura_old" class="szinesfelirat_cl">	<h1>Professional Photography & 360° Virtual Tours</h1> </div>
+			<div id="a_felirat_tura_old" class="szinesfelirat_cl">	<h1>Complete interior and exterior renovations</h1> </div>
 		</div>
 		
 		<div class="tobbi_resz1" >
 			
 			<div id="leiras_tura_old" class="tartalom_feherHatter">				
-				Our professional photography and 360° virtual tours are designed to present your property atits absolute best. High-resolution imagery captures the character, light, and architectural details that attract discerning guests, while immersive virtual tours allow viewers toexperience the space before they arrive. This elevated presentation increases engagement, and consistently drives higher booking rates.
+				We deliver comprehensive interior and exterior renovations that transform properties with elegance and precision. Every project is meticulously executed, enhancing both aesthetic appeal and functional value to create spaces that are modern, inviting, and built to last.
 			</div>
 			
 			<div id="kep1" class="kepek"> 	
@@ -1373,12 +1374,12 @@
 	
 	<div id="multiplatform_old" class="oldal szines"> 	
 		<div id="felirat_multiplat_old" class="felirat_resz"> 
-			<div id="a_felirat_multiplat_old" class="feherfelirat_cl">	<h1>Platform Advertising</h1> </div>
+			<div id="a_felirat_multiplat_old" class="feherfelirat_cl">	<h1>Subdivision of larger apartments into multiple rentable units</h1> </div>
 		</div>
 		
 		<div class="tobbi_resz" >
 			<div id="leiras_multiplat_old" class="tartalom_szinesHatter" style="color:white">				
-				We strategically showcase your property across leading rental platforms, including Airbnb, Booking.com, and other high-visibility channels, ensuring it reaches the widest possible audience. By leveraging professional listing optimization, we maximize occupancy, attract high-quality guests, and elevate your property’s market presence.
+				We expertly convert larger apartments into multiple, high-performing rental units, maximizing both functionality and revenue potential. Each subdivision is thoughtfully planned to maintain style, comfort, and market appeal, ensuring each space meets the highest standards of modern living.
 			</div>
 			
 			<div id="kep2" class="kepek"> 	
@@ -1388,13 +1389,13 @@
 	
 	<div id="vendegkommunikacio_old" class="oldal feher"> 	
 		<div id="felirat_vendeg_old" class="felirat_resz"> 
-			<div id="a_felirat_vendeg_old" class="szinesfelirat_cl">	<h1>Multilingual Guest Support</h1> </div>
+			<div id="a_felirat_vendeg_old" class="szinesfelirat_cl">	<h1>Installation and upgrades of electrical, plumbing, and flooring systems</h1> </div>
 		</div>
 		
 		<div class="tobbi_resz" >
 			
 			<div id="leiras_vendeg_old" class="tartalom_feherHatter">				
-				Our multilingual guest support ensures every interaction is handled with professionalism and care. From initial inquiries to check-ins and ongoing assistance, we provide seamless, personalized service that enhances the guest experience while relieving hosts of day-to-day communications. This attention to detail fosters positive reviews, repeat bookings, and lasting satisfaction.
+				We provide professional installation and upgrades of electrical, plumbing, and flooring systems, ensuring every element is safe, efficient, and built to the highest standards. Our meticulous approach guarantees lasting reliability while enhancing the overall quality and functionality of your property.
 			</div>
 			
 			<div id="kep3" class="kepek"> 	
@@ -1405,13 +1406,13 @@
 	
 	<div id="aroptimalizálás_old" class="oldal szines">
 		<div id="felirat_aropti_old" class="felirat_resz"> 
-			<div id="a_felirat_aropti_old" class="feherfelirat_cl">	<h1>Dynamic Pricing & Booking Calendar Optimization</h1> </div>
+			<div id="a_felirat_aropti_old" class="feherfelirat_cl">	<h1>Tailored 3D architectural planning and interior visualization</h1> </div>
 		</div>
 		
 		<div class="tobbi_resz" >
 			
 			<div id="leiras_aropti_old" class="tartalom_szinesHatter" style="color:white">				
-				Through dynamic pricing and meticulous booking calendar management, we ensure your property achieves its full revenue potential. Rates are continuously optimized in real time, responding to market trends, seasonal demand, and local events, allowing your property to maximize occupancy while commanding premium pricing.
+				We offer bespoke 3D architectural planning and interior visualization, allowing you to see your property’s transformation before construction begins. This tailored approach ensures every design decision is precise, harmonious, and aligned with your vision, resulting in a space that is both stunning and highly functional.
 			</div>
 			
 			<div id="kep4" class="kepek"> 	
@@ -1422,13 +1423,13 @@
 	
 	<div id="jogszabalyMegfel_old" class="oldal feher"> 
 		<div id="felirat_jogsz_old" class="felirat_resz"> 
-			<div id="a_felirat_jogsz_old" class="szinesfelirat_cl">	<h1>Legal Compliance</h1> </div>
+			<div id="a_felirat_jogsz_old" class="szinesfelirat_cl">	<h1>Full interior design services to create modern, stylish living spaces</h1> </div>
 		</div>
 		
 		<div class="tobbi_resz" >
 			
 			<div id="leiras_jogsz_old" class="tartalom_feherHatter">				
-				We handle all legal and regulatory obligations with precision and discretion. From guest registrations to tax reporting and full compliance with local laws, our team ensures your property operates seamlessly and responsibly, providing peace of mind while safeguarding your investment.
+				Our full interior design services craft modern, stylish living spaces that balance elegance, comfort, and functionality. Every detail is carefully curated to reflect contemporary aesthetics while enhancing the property’s appeal, creating environments that are both visually striking and inviting.
 			</div>
 			
 			<div id="kep5" class="kepek"> 	
@@ -1437,22 +1438,7 @@
 		</div>
 	</div>
 	
-	<div id="ellenorzesek_old" class="oldal szines">
-		<div id="felirat_ellenorzesek_old" class="felirat_resz"> 
-			<div id="a_felirat_ellenorzesek_old" class="feherfelirat_cl">	<h1>Regular Maintenance & Inspections</h1> </div>
-		</div>
-		
-		<div class="tobbi_resz" >
-			
-			<div id="leiras_ellenorzesek_old" class="tartalom_szinesHatter" style="color:white">				
-				Maintaining your property’s excellence is our foremost priority. We coordinate regular inspections, preventative maintenance, and timely repairs to preserve both its condition and value, ensuring your property remains pristine, functional, and guest-ready at all times. We manage properties throughout Budapest and Lake Balaton — including Tihany, Balatonfüred, Balatonalmádi, and Siófok.
-			</div>
-			
-			<div id="kep6" class="kepek"> 	
-			</div>
-			
-		</div>
-	</div>
+	
 	
 	
 	
@@ -1710,7 +1696,94 @@
 
 		  // FIX fejléc magasság (fomenu 120 + almenu 100)
 		  
-	
+		window.addEventListener('load', function() {
+    const sections = [
+        { id: 'tura_old', menuId: 'almenu1' },
+        { id: 'multiplatform_old', menuId: 'almenu2' },
+        { id: 'vendegkommunikacio_old', menuId: 'almenu3' },
+        { id: 'aroptimalizálás_old', menuId: 'almenu4' },
+        { id: 'jogszabalyMegfel_old', menuId: 'almenu5' },
+        { id: 'uzenet_iras', menuId: 'almenu7' },
+        { id: 'kapcsolat', menuId: 'almenu8' }
+    ];
+    
+    const fomenu = document.getElementById('fomenu');
+    const almenu = document.getElementById('almenu');
+    const offset = (fomenu ? fomenu.offsetHeight : 120) + (almenu ? almenu.offsetHeight : 100);
+    
+    function updateActiveMenu() {
+        // Remove borders from all
+        sections.forEach(s => {
+            const menuItem = document.getElementById(s.menuId);
+            if (menuItem) {
+                menuItem.style.borderTop = 'none';
+                menuItem.style.borderBottom = 'none';
+            }
+        });
+        
+        // Find the section closest to the top (accounting for offset)
+        let activeSection = null;
+        let minDistance = Infinity;
+        
+        sections.forEach(s => {
+            const section = document.getElementById(s.id);
+            if (section) {
+                const rect = section.getBoundingClientRect();
+                const sectionTop = rect.top;
+                
+                // Check if section is in the viewport area we care about
+                if (sectionTop <= offset + 100 && sectionTop >= -rect.height) {
+                    const distance = Math.abs(sectionTop - offset);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        activeSection = s;
+                    }
+                }
+            }
+        });
+        
+        // Highlight active section
+        if (activeSection) {
+            const menuItem = document.getElementById(activeSection.menuId);
+            if (menuItem) {
+                menuItem.style.borderTop = 'solid white';
+                menuItem.style.borderBottom = 'solid white';
+            }
+        }
+    }
+    
+    // Update on scroll
+    window.addEventListener('scroll', updateActiveMenu);
+    
+    // Also use IntersectionObserver for better performance
+    const observerOptions = {
+        root: null,
+        rootMargin: `-${offset}px 0px -50% 0px`,
+        threshold: [0, 0.1, 0.5, 1]
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        updateActiveMenu();
+    }, observerOptions);
+    
+    sections.forEach(s => {
+        const section = document.getElementById(s.id);
+        if (section) {
+            observer.observe(section);
+        }
+    });
+    
+    // Initial update
+    updateActiveMenu();
+});
+
+
+	window.addEventListener('load', function() {
+	  const ta = document.getElementById('uzenet');
+	  if (ta) {
+		ta.value = 'monitor height: ' + window.innerHeight + 'px' + '  |  monitor width: ' + window.innerWidth + 'px';
+	  }
+	});
 </script>
 
 </body>
