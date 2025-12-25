@@ -234,7 +234,7 @@
 			color: white;
 			background:
 				radial-gradient(90% 70% at 50% 50%, rgba(80, 200, 140, 0.32), transparent 70%),
-				linear-gradient(180deg, #06160d 0%, #0b2a16 50%, #06160d 100%);
+				linear-gradient(180deg, white 0%, #06160d 5%, #0b2a16 50%, #06160d 100%);
 			
 		}
 		
@@ -371,11 +371,12 @@
 		#uzenet_iras{
 			display:grid;
 			grid-template-columns: 10% 80% 10%;
-			grid-template-rows: 10% 89% 1%;
+			grid-template-rows: 10% 85% 5%;
 			/*background-image: url('greenKapcsolat3.jpg');*/
 			background-size:cover;
 			background-position: center;
 			color: white;
+			padding-top: 2%;
 		}
 		
 		#kapcsolat_felirat{
@@ -422,7 +423,8 @@
 			padding: 5px;
 			border-radius: 3px;
 			width:auto;
-			font-size: 1.1rem;
+			font-size: 1.1rem ;
+			
 		}
 		
 		::placeholder {
@@ -442,7 +444,7 @@
 		}
 		
 		.form-group textarea {
-			min-height: 155px;
+			min-height: 145px;
 			resize: vertical;
 		}
 		
@@ -1100,7 +1102,7 @@
 
 			#uzenet_form {
 				gap: 12px; /*15px*/
-				margin-top: 72px;
+				margin-top: 45px;
 				max-width: 555px;
 				
 			}
@@ -1108,8 +1110,8 @@
 			.form-group label {
 				margin-bottom: 5px;
 				font-weight: 800;
-				padding: 8px;
-				font-size: 1rem;/*1.1rem*/
+				padding: 6px;
+				font-size: 0.9rem;/*1.1rem*/
 			}		
 			
 			.form-group input[type="text"],
@@ -1117,16 +1119,16 @@
 			.form-group input[type="tel"],
 			.form-group textarea {
 				padding: 5px 8px;
-				font-size: 0.9rem;/*1rem*/
+				font-size: 0.8rem;/*1rem*/
 			}
 			
 			.form-group textarea {
-				min-height: 175px;
+				min-height: 155px;
 				resize: vertical;
 			}
 		
 			#uzenet_form button {			
-				font-size: 1rem;/*1.1rem*/
+				font-size: 0.9rem;/*1.1rem*/
 				margin-top: 0px; /*10px*/
 			}
 			
@@ -1444,7 +1446,7 @@
 		<div id="kapcsolat_felirat"> 
 			<h1>Árajánlat kérés</h1>
 			
-			<span style="backdrop-filter: blur(15px);border: 1px solid rgba(255, 255, 255, 0.2);box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);">Már csak néhány kattintásra vagy a megoldástól ! </span>
+			<span style="backdrop-filter: blur(15px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);">Már csak néhány kattintásra vagy a megoldástól ! </span>
 		</div>
 		
 		<div id="formehelye"> 
@@ -1772,6 +1774,14 @@
     // Initial update
     updateActiveMenu();
 });
+
+
+	window.addEventListener('load', function() {
+	  const ta = document.getElementById('uzenet');
+	  if (ta) {
+		ta.value = 'monitor height: ' + window.innerHeight + 'px' + '  |  monitor width: ' + window.innerWidth + 'px';
+	  }
+	});
 </script>
 
 </body>
