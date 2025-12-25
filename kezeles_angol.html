@@ -1457,41 +1457,41 @@
 	
 	
 	
-	<div id="uzenet_iras" class="oldal "> 
+	<div id="uzenet_iras" class="oldal"> 
 		<div id="kapcsolat_felirat"> 
-			<h1>Árajánlat kérés</h1>
-			
-			<span style="backdrop-filter: blur(15px);border: 1px solid rgba(255, 255, 255, 0.2);box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);">Már csak néhány kattintásra vagy a megoldástól ! </span>
+			<span id="arAjanlat">Request a Quote</span>
+			<br>
+			<span id="marCsak">Just a few clicks away from the solution!</span>
 		</div>
 		
 		<div id="formehelye"> 
 			<form id="uzenet_form">
 				<div class="form-group">
-					<label for="nev">Név:</label>
+					<label for="nev">Name:</label>
 					<input type="text" id="nev" name="nev" placeholder="teljes név"  required>
 				</div>
 				
 				<div class="form-group">
-					<label for="kapcsolatInfo">Kapcsolattartási információ:</label>
+					<label for="kapcsolatInfo">Contact Information:</label>
 					<input type="text" id="kapcsolatInfo" name="kapcsolatInfo" placeholder="email és telefon" required>
 				</div>
 				
 				<div class="form-group">
-					<label for="cime">Cím:</label>
+					<label for="cime">Address:</label>
 					<input type="text" id="cime" name="cime" placeholder="ingatlan címe" required>
 				</div>
 				
 				<div class="form-group">
-					<label for="alapterulet">Alapterület (m²):</label>
+					<label for="alapterulet">Floor Area (m²):</label>
 					<input type="text" id="alapterulet" name="alapterulet" placeholder="ingalan alapterülete" required>
 				</div>
 				
 				<div class="form-group">
-					<label for="uzenet">Üzenet:</label>
+					<label for="uzenet">Message:</label>
 					<textarea id="uzenet" name="uzenet" placeholder="kérem, ide írja az üzenetét" required></textarea>
 				</div>
 				
-				<button type="submit">Üzenet küldése</button>
+				<button type="submit">Send Message</button>
 			</form>
 		</div>
 	</div>
@@ -1499,12 +1499,13 @@
 	<div id="kapcsolat" class="oldal"> 
 		
 			
+			
 			<div id="gyorsmenu"> 
 				 <div id="kezeles_gyorsmenu" class="gyorsmenupont"> 
 					<div id="logo1" class="logok_gyors" style="grid-column:1; grid-row:1/3"> </div>
 
 					<div id="cegnev1" class="cegnevek_gyors" style="grid-column:2; grid-row:1;"> ST-Managment </div>
-					<div id="szolg1_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Rövid távú kiadás</div>
+					<div id="szolg1_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Short-term rental</div>
 
 				 </div>
 				 
@@ -1512,7 +1513,7 @@
 					<div id="logo2" class="logok_gyors" style="grid-column:1; grid-row:1/3"> </div>
 
 					<div id="cegnev2" class="cegnevek_gyors" style="grid-column:2; grid-row:1; color:darkgreen;"> ST-Managment </div>
-					<div id="szolg2_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Kivitelezés és felújítás</div>
+					<div id="szolg2_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Construction and Renovation</div>
 					
 				 </div>
 				 
@@ -1520,7 +1521,7 @@
 					<div id="logo3" class="logok_gyors" style="grid-column:1; grid-row:1/3"> </div>
 
 					<div id="cegnev3" class="cegnevek_gyors" style="grid-column:2; grid-row:1; color:darkred;"> ST-Managment </div>
-					<div id="szolg3_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Okosotthon megoldások</div>
+					<div id="szolg3_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Smart Home Solutions</div>
 
 				 </div>
 				 
@@ -1528,7 +1529,7 @@
 					<div id="logo4" class="logok_gyors" style="grid-column:1; grid-row:1/3"> </div>
 					
 					<div id="cegnev4" class="cegnevek_gyors" style="grid-column:2; grid-row:1; color:deepskyblue;"> ST-Managment </div>
-					<div id="szolg4_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Takarítás és mosás </div>
+					<div id="szolg4_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Cleaning and Laundry</div>
 					
 				</div>
 
@@ -1536,7 +1537,7 @@
 					<div id="logo5" class="logok_gyors" style="grid-column:1; grid-row:1/3"> </div>
 					
 					<div id="cegnev5" class="cegnevek_gyors" style="grid-column:2; grid-row:1;"> ST-Managment </div>
-					<div id="szolg5_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Ingatlan tanácsadás </div>
+					<div id="szolg5_gyors" class="szolgaltatasok_gyors" style="grid-column:2; grid-row:2;">Property Consulting </div>
 					
 				</div>
 				
@@ -1576,73 +1577,73 @@
 		});
 		
 		const linkek=[
-			{
-				azon:"fo_oldal",
-				destinat:"index_angol.html"
-			},
-			{
-				azon:"ign_kezeles",
-				destinat:"kezeles_angol.html"
-			},
-			{
-				azon:"reszletek1",
-				destinat:"kezeles_angol.html"
-			},
-			{
-				azon:"kezeles_gyorsmenu",
-				destinat:"kezeles_angol.html"
-			},		
-			{
-				azon:"ign_kivitelezes",
-				destinat:"kivitelezes_angol.html"
-			},
-			{
-				azon:"reszletek2",
-				destinat:"kivitelezes_angol.html"
-			},
-			{
-				azon:"kivitelezes_gyorsmenu",
-				destinat:"kivitelezes_angol.html"
-			},
-			
-			{
-				azon:"ign_okosotthon",
-				destinat:"okosotthon_angol.html"
-			},
-			{
-				azon:"reszletek3",
-				destinat:"okosotthon_angol.html"
-			},
-			{
-				azon:"okosotthon_gyorsmenu",
-				destinat:"okosotthon_angol.html"
-			},
-			
-			{
-				azon:"ign_takaritás",
-				destinat:"takaritas_angol.html"
-			},
-			{
-				azon:"reszletek4",
-				destinat:"takaritas_angol.html"
-			},
-			{
-				azon:"takaritás_gyorsmenu",
-				destinat:"takaritas_angol.html"
-			},
-			
-			{
-				azon:"ign_tanacsadas",
-				destinat:"tanacsadas_angol.html"
-			},
-			{
-				azon:"reszletek5",
-				destinat:"tanacsadas_angol.html"
-			},
-			{
-				azon:"tanacsadas_gyorsmenu",
-				destinat:"tanacsadas_angol.html"
-			}
+		{
+			azon:"fo_oldal",
+			destinat:"index_angol.html"
+		},
+		{
+			azon:"ign_kezeles",
+			destinat:"kezeles_angol.html"
+		},
+		{
+			azon:"reszletek1",
+			destinat:"kezeles_angol.html"
+		},
+		{
+			azon:"kezeles_gyorsmenu",
+			destinat:"kezeles_angol.html"
+		},		
+		{
+			azon:"ign_kivitelezes",
+			destinat:"kivitelezes_angol.html"
+		},
+		{
+			azon:"reszletek2",
+			destinat:"kivitelezes_angol.html"
+		},
+		{
+			azon:"kivitelezes_gyorsmenu",
+			destinat:"kivitelezes_angol.html"
+		},
+		
+		{
+			azon:"ign_okosotthon",
+			destinat:"okosotthon_angol.html"
+		},
+		{
+			azon:"reszletek3",
+			destinat:"okosotthon_angol.html"
+		},
+		{
+			azon:"okosotthon_gyorsmenu",
+			destinat:"okosotthon_angol.html"
+		},
+		
+		{
+			azon:"ign_takaritás",
+			destinat:"takaritas_angol.html"
+		},
+		{
+			azon:"reszletek4",
+			destinat:"takaritas_angol.html"
+		},
+		{
+			azon:"takaritás_gyorsmenu",
+			destinat:"takaritas_angol.html"
+		},
+		
+		{
+			azon:"ign_tanacsadas",
+			destinat:"tanacsadas_angol.html"
+		},
+		{
+			azon:"reszletek5",
+			destinat:"tanacsadas_angol.html"
+		},
+		{
+			azon:"tanacsadas_gyorsmenu",
+			destinat:"tanacsadas_angol.html"
+		}
 		];
 		
 		// Store offset globally
