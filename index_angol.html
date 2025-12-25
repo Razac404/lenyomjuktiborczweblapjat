@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ST-Managementt</title>
+	<title>ST-Management</title>
 	<style>
 	
 		*{
@@ -36,8 +36,8 @@
 			
 			/*background: radial-gradient(ellipse at center, #fcfcfc 0%, #e8e8e8 100%);*/
 			
-			background: linear-gradient(180deg, #fdfbf8 0%, #f3efe9 100%);
-
+			transition: background 0.5s ease-in-out, background-color 0.5s ease-in-out;
+			
 
 		}
 		
@@ -50,11 +50,14 @@
 		}
 		#logo{
 			margin-left: -40px;
+			opacity: 0;
 		}
 		
 		#logo img {
 			max-height: 100px;
 			width: auto;
+			
+			transition: opacity 0.5s ease-in-out;
 		}
 		
 		#cegnev{
@@ -62,7 +65,7 @@
 			Bell MT;
 			font-weight: 500;
 			font-stretch: 150%;
-			
+			color: transparent;
 		}
 		
 		#toltes_fomenu1{
@@ -83,9 +86,11 @@
 			align-items: center;
 			justify-content: center;
 			cursor: pointer;
-			color:gray;
+			/*color:gray;*/
 			border-radius: 20px;
 			transition: color 0.6s ease-in-out;
+			color: #f2f2ee;
+
 		}
 		
 
@@ -107,7 +112,6 @@
 			overflow: hidden; /* clips the excess */
 		}
 		
-				
 		
 		
 		.oldal{
@@ -117,14 +121,80 @@
 			overflow: hidden; /* hogy semmi ne lógjon túl */
 		}
 		
+
+		.video-container {
+		  position: relative;
+		  width: 100%;
+		  height: 95vh;
+		  overflow: hidden;
+		}
+
+		.video-container video {
+		  position: absolute;
+		  inset: 0;
+		  width: 100%;
+		  height: 100%;
+		  object-fit: cover;
+		}
+		
+		.overlay {
+			position: absolute;
+			inset: 0;
+			z-index: 2;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			pointer-events: none;
+			font-size: 4rem;
+			background-color: rgba(0, 0, 0, 0.5); /* 50% fekete */
+			
+			
+			color: rgba(255, 255, 255, 0.8); /* 80% opacity - less strong */
+
+		}
+		
+		.overlay img{
+			height: 20%;
+			width: 8%;
+			opacity: 0.8;
+		}
+		
+		#arrowV {
+			position: absolute;
+			top: 65%; /* 50% (middle) + 5% = 55% */
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 3;
+			width: 0;
+			height: 0;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-top: 20px solid rgba(255, 255, 255, 0.8);
+			cursor: pointer;
+			pointer-events: auto;
+			animation: bounce 2s infinite;
+		}
+
+		#arrowV:hover {
+			border-top-color: #ffffff; /* Pure white - maximum sharpness */
+			border-top-width: 22px; /* Slightly thicker */
+			border-left-width: 16px;
+			border-right-width: 16px;
+			
+			filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+			transition: all 0.3s ease;
+		}
+		
+				
+		
 		#szolgaltatasok{
 			display: grid;
 			grid-template-columns: 10% 80% 10%;
-			
+			padding-top: 2vh;
 			color:white;
 			grid-template-rows: 20% 20% 20% 20% 20%;
-			height: 95vh;
-			padding-top: 120px;
+			
+			
 		}
 		
 		
@@ -722,6 +792,7 @@
 		.nyelv-valaszto {
 			position: relative;
 			width: 44px;
+			opacity: 0;
 		}
 
 		.nyelv-aktiv {
@@ -795,6 +866,15 @@
 				height: calc(95vh - 115px) !important;				
 			}
 			
+			.overlay {
+				font-size: 3.5rem;
+			}
+			
+			.overlay img{
+				height: 16%;
+				width: 7.5%;
+			}
+			
 			#toltes_fomenu1{
 				width: 25px;/*30px*/
 			}
@@ -856,6 +936,15 @@
 		@media screen and (max-width:1500px){
 			.oldal{				
 				height: calc(95vh - 108px) !important;				
+			}
+			
+			.overlay {
+				font-size: 3.1rem;
+			}
+			
+			.overlay img{
+				height: 13%;
+				width: 6.5%;
 			}
 			
 			#toltes_fomenu1{
@@ -932,6 +1021,15 @@
 				height: calc(95vh - 102px) !important;				
 			}
 			
+			.overlay {
+				font-size: 2.7rem;
+			}
+			
+			.overlay img{
+				height: 11%;
+				width: 6.5%;
+			}
+			
 			#logo img {
 				max-height: 85px;
 			}
@@ -998,6 +1096,15 @@
 				height: calc(95vh - 85px) !important;				
 			}
 			
+			.overlay {
+				font-size: 2.2rem;
+			}
+			
+			.overlay img{
+				height: 8%;
+				width: 6%;
+			}
+			
 			#toltes_fomenu1{
 				width: 8px;/*30px*/
 			}
@@ -1060,6 +1167,15 @@
 			}
 		}
 		@media screen and (max-height:1000px){
+			.overlay {
+				font-size: 2.7rem;
+			}
+			
+			.overlay img{
+				height: 11%;
+				width: 6.5%;
+			}
+			
 			#kapcsolat_felirat{
 				font-size: 1.4rem;
 				margin-top: 5px;
@@ -1154,6 +1270,14 @@
 		}
 		
 		@media screen and (max-height:900px){
+			.oldal{				
+				height: calc(95vh - 85px) !important;				
+			}
+			
+			.overlay {
+				font-size: 2.0rem;
+			}
+			
 			#kapcsolat_felirat{
 				font-size: 1.2rem;
 				margin-top: 4px;
@@ -1168,6 +1292,7 @@
 				
 				margin-top: 2px;
 				display: inline-block;
+				
 			}
 			
 			#uzenet_form {
@@ -1179,7 +1304,7 @@
 			.form-group label {
 				margin-bottom: 5px;
 				font-weight: 800;
-				padding: 6px;
+				padding: 5px;
 				font-size: 0.9rem;/*1.1rem*/
 			}		
 			
@@ -1192,7 +1317,7 @@
 			}
 			
 			.form-group textarea {
-				min-height: 145px;
+				min-height: 130px;
 				resize: vertical;
 			}
 		
@@ -1255,57 +1380,69 @@
 			}
 			
 			#gmap{
-				margin-top: 1%; 
+				margin-top: 0.5%; 
 			}
-			#telefon_email{
-				top: -5%; 
-			}
+			
 		}
 		
 		
 	</style>
 </head>
 <body>
+	
+	
 	<div id="fomenu"> 
-		<div id="logo"> <img src="logo_black.PNG" alt="egymásra csusztatott lakások"> </div>
-		<div id="cegnev">ST-Management</div>
+		<div id="logo"> <img src="logo_black.PNG" alt="stacked apartments"> </div>
+		<div id="cegnev">ST-Managment</div>
 		<div id="toltes_fomenu1"> </div>
-		<div id="fo_oldal" class="menupont" ><span style="font-family: Libre Baskerville;">Főoldal</span> </div>	
-		<div id="ign_kezeles" class="menupont">Ingatlan kezelés </div>
-		<div id="ign_kivitelezes" class="menupont" >Kivitelezés </div>
-		<div id="ign_okosotthon" class="menupont" >Okosotthon </div>
-		<div id="ign_takaritás" class="menupont" >Takarítás </div>
-		<div id="ign_tanacsadas" class="menupont" >Tanácsadás </div>
+		<div id="fo_oldal" class="menupont" >Home</div>	
+		<div id="ign_kezeles" class="menupont" style="width:fit-content;">Property Management</div>
+		<div id="ign_kivitelezes" class="menupont" >Construction</div>
+		<div id="ign_okosotthon" class="menupont" >Smart Home</div>
+		<div id="ign_takaritás" class="menupont" >Cleaning</div>
+		<div id="ign_tanacsadas" class="menupont" >Consulting</div>
 		<div id="toltes_fomenu2"> </div>
 		<div class="nyelv-valaszto">
 			<div class="nyelv-aktiv" id="nyelvToggle">
-				<img src="hungaryan_flag.png" alt="Magyar">
+				<img src="british_flag.png" alt="Hungarian">
 				<span class="arrow"></span>
 			</div>
-
 			<ul class="nyelv-lista">
 				<li onclick="location.href='index.html'">
-					<img src="hungaryan_flag.png" alt="Magyar">
+					<img src="hungaryan_flag.png" alt="Hungarian">
 				</li>
 				<li onclick="location.href='index_angol.html'">
 					<img src="british_flag.png" alt="English">
 				</li>
 			</ul>
 		</div>
-
+	</div>
+	
+	<div id="nyito_oldal" class="video-container">
+		<video autoplay loop muted playsinline preload="auto">
+			<source src="st_b_Video.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+		<div class="overlay">
+			<img src="logo_white.png.PNG" alt="egymásra csusztatott lakások">
+			ST-Management
+			
+		</div>
+		<div id="arrowV"> </div>
 	</div>
 	
 	
-	<div id="szolgaltatasok"> 
+	
+	<div id="szolgaltatasok" class="oldal"> 
 	
 		
 		
 		<div id="ign_kezeles_szolg_fooldal" class="szolgaltatasok_item bal" >
 			<div id="szolg1_szoveg" class="szoveg">
-				<div id="szolg1_cim" class="cim"> <h1>Rövid távú kiadás hirdetése és kezelése</h1> </div>
+				<div id="szolg1_cim" class="cim"> <h1>Short-term rental listing and management</h1> </div>
 				<div id="szolg1_leiras" class="leiras">
-					Lakóingatlanok rövid távú, magas hozamot biztosító bérleményekké történő átalakítására irányuló szolgáltatásainkat úgy alakítottuk ki, hogy a lehető legnagyobb bevételt biztosítsák Önnek, miközben minimálisra csökkentjük a tulajdonosi teendőket!
-					<br> <span id="reszletek1" class="reszletek" ><a>további részletek ➾ </a></span>
+					Our services for converting residential properties into short-term, high-yield rentals are designed to maximize your revenue while minimizing owner responsibilities!
+					<br> <span id="reszletek1" class="reszletek" ><a>more details ➾ </a></span>
 				</div>
 			</div>
 			<div id="szolg1_kep" class="kep"> 
@@ -1315,10 +1452,10 @@
 		
 		<div id="ign_kivitelezes_szolg_fooldal" class="szolgaltatasok_item jobb">
 			<div id="szolg2_szoveg" class="szoveg">
-				<div id="szolg2_cim" class="cim"> <h1>Kivitelezés és felújítás</h1> </div>
+				<div id="szolg2_cim" class="cim"> <h1>Construction and Renovation</h1> </div>
 				<div id="szolg2_leiras" class="leiras">
-					Akár kiadásra készíti elő ingatlanát, akár egy régebbi épület korszerűsítését tervezi,<br>tapasztalt kivitelező csapatunk teljes körű átalakítást kínál!
-					<br> <span id="reszletek2" class="reszletek" ><a>további részletek ➾ </a></span>
+					Whether you're preparing your property for rental or planning to modernize an older building,<br>our experienced construction team offers comprehensive transformation!
+					<br> <span id="reszletek2" class="reszletek" ><a>more details ➾ </a></span>
 				</div>
 			</div>
 			<div id="szolg2_kep" class="kep"> 
@@ -1328,11 +1465,11 @@
 		
 		<div id="ign_okosotthon_szolg_fooldal" class="szolgaltatasok_item bal">
 			<div id="szolg3_szoveg" class="szoveg">
-				<div id="szolg3_cim" class="cim"> <h1>Okosotthon megoldások</h1> </div>
+				<div id="szolg3_cim" class="cim"> <h1>Smart Home Solutions</h1> </div>
 				<div id="szolg3_leiras" class="leiras">
-					Emelje ingatlanát a következő szintre modern okostechnológiákkal, amelyek kényelmesebbé,
-					<br>biztonságosabbá és hatékonyabbá teszik a működtetést!
-					<br> <span id="reszletek3" class="reszletek" ><a>további részletek ➾ </a></span>
+					Elevate your property to the next level with modern smart technologies that make operation more comfortable,
+					<br>safer and more efficient!
+					<br> <span id="reszletek3" class="reszletek" ><a>more details ➾ </a></span>
 				</div>
 			</div>
 			<div id="szolg3_kep" class="kep"> 
@@ -1342,11 +1479,11 @@
 		
 		<div id="ign_takaritás_szolg_fooldal" class="szolgaltatasok_item jobb"> 
 			<div id="szolg4_szoveg" class="szoveg">
-				<div id="szolg4_cim" class="cim"> <h1>Takarítás és mosás</h1> </div>
+				<div id="szolg4_cim" class="cim"> <h1>Cleaning and Laundry</h1> </div>
 				<div id="szolg4_leiras" class="leiras">
-					A tisztaság alapvető fontosságú a vendégek elégedettsége és a pozitív értékelések szempontjából.
-					<br>Saját takarító- és mosodai szolgáltatásunkkal minden ingatlan megfelel a professzionális vendéglátóipari normáknak!
-					<br> <span id="reszletek4" class="reszletek" ><a>további részletek ➾ </a></span>
+					Cleanliness is essential for guest satisfaction and positive reviews.
+					<br>With our own cleaning and laundry services, every property meets professional hospitality standards!
+					<br> <span id="reszletek4" class="reszletek" ><a>more details ➾ </a></span>
 				</div>
 			</div>
 			<div id="szolg4_kep" class="kep"> 
@@ -1356,11 +1493,11 @@
 		
 		<div id="ign_tanacsadas_szolg_fooldal" class="szolgaltatasok_item bal"> 
 			<div id="szolg5_szoveg" class="szoveg">
-				<div id="szolg5_cim" class="cim"> <h1>Ingatlan tanácsadás</h1> </div>
+				<div id="szolg5_cim" class="cim"> <h1>Property Consulting</h1> </div>
 				<div id="szolg5_leiras" class="leiras">
-					A magyar ingatlanpiacon való eligazodás kihívást jelenthet – ebben nyújtunk személyre szabott segítséget 
-					<br>befektetőknek, tulajdonosoknak és vásárlóknak egyaránt.
-					<br> <span id="részletek5" class="reszletek"><a>további részletek ➾ </a></span>
+					Navigating the Hungarian real estate market can be challenging – we provide personalized assistance 
+					<br>for investors, owners, and buyers alike.
+					<br> <span id="részletek5" class="reszletek"><a>more details ➾ </a></span>
 				</div>
 			</div>
 			<div id="szolg5_kep" class="kep"> 
@@ -1511,12 +1648,83 @@
 		const reszletekHivat = [
 			"reszletek1","reszletek2", "reszletek3", "reszletek4", "reszletek5"
 		]
+		
+		const linkek=[
+		{
+			azon:"fo_oldal",
+			destinat:"index.html"
+		},
+		{
+			azon:"ign_kezeles",
+			destinat:"kezeles.html"
+		},
+		{
+			azon:"reszletek1",
+			destinat:"kezeles.html"
+		},
+		{
+			azon:"kezeles_gyorsmenu",
+			destinat:"kezeles.html"
+		},		
+		{
+			azon:"ign_kivitelezes",
+			destinat:"kivitelezes.html"
+		},
+		{
+			azon:"reszletek2",
+			destinat:"kivitelezes.html"
+		},
+		{
+			azon:"kivitelezes_gyorsmenu",
+			destinat:"kivitelezes.html"
+		},
+		
+		{
+			azon:"ign_okosotthon",
+			destinat:"okosotthon.html"
+		},
+		{
+			azon:"reszletek3",
+			destinat:"okosotthon.html"
+		},
+		{
+			azon:"okosotthon_gyorsmenu",
+			destinat:"okosotthon.html"
+		},
+		
+		{
+			azon:"ign_takaritás",
+			destinat:"takaritas.html"
+		},
+		{
+			azon:"reszletek4",
+			destinat:"takaritas.html"
+		},
+		{
+			azon:"takaritás_gyorsmenu",
+			destinat:"takaritas.html"
+		},
+		
+		{
+			azon:"ign_tanacsadas",
+			destinat:"tanacsadas.html"
+		},
+		{
+			azon:"reszletek5",
+			destinat:"tanacsadas.html"
+		},
+		{
+			azon:"tanacsadas_gyorsmenu",
+			destinat:"tanacsadas.html"
+		}
+		];
 		let aktualisIndex = 0;
 		let intervalId = null;
 		let szunetel = false;
 		let hoverIndex = null;
 		
 		const nyelv = document.querySelector('.nyelv-valaszto');
+		const menupontElements = document.querySelectorAll('.menupont');
 		const toggle = document.getElementById('nyelvToggle');
 
 		toggle.addEventListener('click', () => {
@@ -1530,27 +1738,58 @@
 		});
 		
 		window.addEventListener('load', function() {
-  const ta = document.getElementById('uzenet');
-  if (ta) {
-	ta.value = 'monitor height: ' + window.innerHeight + 'px' + '  |  monitor width: ' + window.innerWidth + 'px';
-  }
-});
+	  const ta = document.getElementById('uzenet');
+	  if (ta) {
+		ta.value = 'monitor height: ' + window.innerHeight + 'px' + '  |  monitor width: ' + window.innerWidth + 'px';
+	  }
+	});
 
 		window.onload = function () {
-			initHover();
-			inditValtakozas();
-			document.getElementById('ign_kezeles').addEventListener('click', function(){
-				window.location.href= "kiadas.html";
-			});
-			document.getElementById('reszletek1').addEventListener('click', function(){
-				window.location.href= "kiadas.html";
-			});
-			document.getElementById('kezeles_gyorsmenu').addEventListener('click', function(){
-				window.location.href= "kiadas.html";
-			});
-			
-		};
 
+			linkek.forEach(l=>{
+				document.getElementById(l.azon).addEventListener('click', function(){
+					window.location.href=l.destinat
+				});
+			});
+
+		};
+		
+		window.addEventListener('scroll', function() {
+			const fomenu = document.getElementById('fomenu');
+			const logo = document.getElementById('logo');
+			const cegnev = document.getElementById('cegnev');
+			const fo_oldal = document.getElementById('fo_oldal');
+			if (fomenu) {
+				if (window.scrollY === 0) { // Change after 100px scroll
+					if (intervalId) {
+						clearInterval(intervalId);
+						intervalId = null;
+					}
+					// Reset to initial state
+					
+					fomenu.style.background = 'transparent';
+					logo.style.opacity=0;
+					nyelv.style.opacity=0;
+					cegnev.style.color='transparent';
+					fo_oldal.style.borderTop= 'none';
+					fo_oldal.style.borderBottom= 'none';
+					menupontElements.forEach(element => {element.style.color = 'white';});
+				} 
+				else {
+					if (!intervalId && !szunetel) { 
+						inditValtakozas();
+						initHover();
+					}
+					fomenu.style.background = 'linear-gradient(180deg, #fdfbf8 0%, #f3efe9 100%)';
+					logo.style.opacity=1;
+					nyelv.style.opacity=1;
+					cegnev.style.color='black';
+					menupontElements.forEach(element => {element.style.color = 'black';});
+
+				}
+			}
+		});
+		
 		function resetAll() {
 			parok.forEach(p => {
 			document.getElementById(p.szolg).style.transform = "scale(1)";
@@ -1584,7 +1823,7 @@
 			}
 			}, 7000);
 		}
-
+			
 		function initHover() {
 			parok.forEach((p, index) => {
 			const menuElem = document.getElementById(p.menu);
@@ -1637,13 +1876,23 @@
 			
 		}
 		
+		// Scroll to szolgaltatasok when arrowV is clicked (accounting for fixed menu height)
+	document.getElementById('arrowV').addEventListener('click', function() {
+		const target = document.getElementById('szolgaltatasok');
+		const fomenu = document.getElementById('fomenu');
+		const fomenuHeight = fomenu.offsetHeight;
+		const targetPosition = target.offsetTop - fomenuHeight + 1;
 		
+		window.scrollTo({
+			top: targetPosition,
+			behavior: 'smooth'
+		});
+	});
 		
 </script>
 
 </body>
 </html>
-
 
 
 
