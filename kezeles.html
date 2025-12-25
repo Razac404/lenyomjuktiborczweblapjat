@@ -1561,155 +1561,226 @@
 	</div>
 	
 <script>
+	const nyelv = document.querySelector('.nyelv-valaszto');
+	const toggle = document.getElementById('nyelvToggle');
 
-		const nyelv = document.querySelector('.nyelv-valaszto');
-		const toggle = document.getElementById('nyelvToggle');
+	toggle.addEventListener('click', () => {
+		nyelv.classList.toggle('open');
+	});
 
-		toggle.addEventListener('click', () => {
-			nyelv.classList.toggle('open');
-		});
-
-		document.addEventListener('click', (e) => {
-			if (!nyelv.contains(e.target)) {
-				nyelv.classList.remove('open');
-			}
-		});
-		
-		const linkek=[
-			{
-				azon:"fo_oldal",
-				destinat:"index.html"
-			},
-			{
-				azon:"ign_kezeles",
-				destinat:"kezeles.html"
-			},
-			{
-				azon:"reszletek1",
-				destinat:"kezeles.html"
-			},
-			{
-				azon:"kezeles_gyorsmenu",
-				destinat:"kezeles.html"
-			},		
-			{
-				azon:"ign_kivitelezes",
-				destinat:"kivitelezes.html"
-			},
-			{
-				azon:"reszletek2",
-				destinat:"kivitelezes.html"
-			},
-			{
-				azon:"kivitelezes_gyorsmenu",
-				destinat:"kivitelezes.html"
-			},
-			
-			{
-				azon:"ign_okosotthon",
-				destinat:"okosotthon.html"
-			},
-			{
-				azon:"reszletek3",
-				destinat:"okosotthon.html"
-			},
-			{
-				azon:"okosotthon_gyorsmenu",
-				destinat:"okosotthon.html"
-			},
-			
-			{
-				azon:"ign_takaritás",
-				destinat:"takaritas.html"
-			},
-			{
-				azon:"reszletek4",
-				destinat:"takaritas.html"
-			},
-			{
-				azon:"takaritás_gyorsmenu",
-				destinat:"takaritas.html"
-			},
-			
-			{
-				azon:"ign_tanacsadas",
-				destinat:"tanacsadas.html"
-			},
-			{
-				azon:"reszletek5",
-				destinat:"tanacsadas.html"
-			},
-			{
-				azon:"tanacsadas_gyorsmenu",
-				destinat:"tanacsadas.html"
-			}
-		];
-		
-		// Store offset globally
-		let fixedOffset = 220;
-
-		// Function to calculate and update fixedOffset
-		function updateFixedOffset() {
-			const fomenu = document.getElementById('fomenu');
-			const almenu = document.getElementById('almenu');
-			
-			if (fomenu && almenu) {
-				fixedOffset = fomenu.offsetHeight + almenu.offsetHeight;
-			} else {
-				fixedOffset = 220; // Fallback
-			}
+	document.addEventListener('click', (e) => {
+		if (!nyelv.contains(e.target)) {
+			nyelv.classList.remove('open');
 		}
+	});
+	
+	const linkek=[
+		{
+			azon:"fo_oldal",
+			destinat:"index.html"
+		},
+		{
+			azon:"ign_kezeles",
+			destinat:"kezeles.html"
+		},
+		{
+			azon:"reszletek1",
+			destinat:"kezeles.html"
+		},
+		{
+			azon:"kezeles_gyorsmenu",
+			destinat:"kezeles.html"
+		},		
+		{
+			azon:"ign_kivitelezes",
+			destinat:"kivitelezes.html"
+		},
+		{
+			azon:"reszletek2",
+			destinat:"kivitelezes.html"
+		},
+		{
+			azon:"kivitelezes_gyorsmenu",
+			destinat:"kivitelezes.html"
+		},
+		
+		{
+			azon:"ign_okosotthon",
+			destinat:"okosotthon.html"
+		},
+		{
+			azon:"reszletek3",
+			destinat:"okosotthon.html"
+		},
+		{
+			azon:"okosotthon_gyorsmenu",
+			destinat:"okosotthon.html"
+		},
+		
+		{
+			azon:"ign_takaritás",
+			destinat:"takaritas.html"
+		},
+		{
+			azon:"reszletek4",
+			destinat:"takaritas.html"
+		},
+		{
+			azon:"takaritás_gyorsmenu",
+			destinat:"takaritas.html"
+		},
+		
+		{
+			azon:"ign_tanacsadas",
+			destinat:"tanacsadas.html"
+		},
+		{
+			azon:"reszletek5",
+			destinat:"tanacsadas.html"
+		},
+		{
+			azon:"tanacsadas_gyorsmenu",
+			destinat:"tanacsadas.html"
+		}
+	];
+	
+	// Store offset globally
+	let fixedOffset = 220;
 
-		window.onload = function () {
-			// Calculate initial offset
-			updateFixedOffset();
+	// Function to calculate and update fixedOffset
+	function updateFixedOffset() {
+		const fomenu = document.getElementById('fomenu');
+		const almenu = document.getElementById('almenu');
+		
+		if (fomenu && almenu) {
+			fixedOffset = fomenu.offsetHeight + almenu.offsetHeight;
+		} else {
+			fixedOffset = 220; // Fallback
+		}
+	}
 
-			linkek.forEach(l => {
-				const element = document.getElementById(l.azon);
-				if (element) {
-					element.addEventListener('click', function() {
-						window.location.href = l.destinat;
-					});
-				}
-			});
+	const menuToSection = {
+		almenu1: "tura_old",
+		almenu2: "multiplatform_old",
+		almenu3: "vendegkommunikacio_old",
+		almenu4: "aroptimalizálás_old",
+		almenu5: "jogszabalyMegfel_old",
+		almenu6: "ellenorzesek_old",
+		almenu7: "uzenet_iras",
+		almenu8: "kapcsolat"
+	};
 
-			document.querySelectorAll(".al_menupont").forEach(item => {
-				item.addEventListener("click", () => {
-					const targetId = menuToSection[item.id];
-					const target = document.getElementById(targetId);
+	window.onload = function () {
+		// Calculate initial offset
+		updateFixedOffset();
 
-					if (!target) return;
+		linkek.forEach(l => {
+			const element = document.getElementById(l.azon);
+			if (element) {
+				element.addEventListener('click', function() {
+					window.location.href = l.destinat;
+				});
+			}
+		});
 
-					// Use the stored offset (updated on resize)
-					const y = target.getBoundingClientRect().top + window.pageYOffset - fixedOffset;
+		document.querySelectorAll(".al_menupont").forEach(item => {
+			item.addEventListener("click", () => {
+				const targetId = menuToSection[item.id];
+				const target = document.getElementById(targetId);
 
-					window.scrollTo({
-						top: y,
-						behavior: "smooth"
-					});
+				if (!target) return;
+
+				// Use the stored offset (updated on resize)
+				const y = target.getBoundingClientRect().top + window.pageYOffset - fixedOffset;
+
+				window.scrollTo({
+					top: y,
+					behavior: "smooth"
 				});
 			});
-		};
-
-		// Update offset on every window resize
-		window.addEventListener('resize', function() {
-			updateFixedOffset();
 		});
+	};
 
-		const menuToSection = {
-			almenu1: "tura_old",
-			almenu2: "multiplatform_old",
-			almenu3: "vendegkommunikacio_old",
-			almenu4: "aroptimalizálás_old",
-			almenu5: "jogszabalyMegfel_old",
-			almenu6: "ellenorzesek_old",
-			almenu7: "uzenet_iras",
-			almenu8: "kapcsolat"
-		  };
+	// Update offset on every window resize
+	window.addEventListener('resize', function() {
+		updateFixedOffset();
+	});
 
-		  // FIX fejléc magasság (fomenu 120 + almenu 100)
-		  
-	
+	// Active menu highlighting based on scroll position
+	window.addEventListener('load', function() {
+		const sections = [
+			{ id: 'tura_old', menuId: 'almenu1' },
+			{ id: 'multiplatform_old', menuId: 'almenu2' },
+			{ id: 'vendegkommunikacio_old', menuId: 'almenu3' },
+			{ id: 'aroptimalizálás_old', menuId: 'almenu4' },
+			{ id: 'jogszabalyMegfel_old', menuId: 'almenu5' },
+			{ id: 'ellenorzesek_old', menuId: 'almenu6' },
+			{ id: 'uzenet_iras', menuId: 'almenu7' },
+			{ id: 'kapcsolat', menuId: 'almenu8' }
+		];
+		
+		const fomenu = document.getElementById('fomenu');
+		const almenu = document.getElementById('almenu');
+		const offset = (fomenu ? fomenu.offsetHeight : 120) + (almenu ? almenu.offsetHeight : 100);
+		
+		function updateActiveMenu() {
+			// Remove borders from all
+			sections.forEach(s => {
+				const menuItem = document.getElementById(s.menuId);
+				if (menuItem) {
+					menuItem.style.borderTop = 'none';
+					menuItem.style.borderBottom = 'none';
+				}
+			});
+			
+			// Find the section that's currently at or just past the offset line
+			let activeSection = null;
+			
+			// Check sections from top to bottom
+			for (let i = sections.length - 1; i >= 0; i--) {
+				const section = document.getElementById(sections[i].id);
+				if (section) {
+					const rect = section.getBoundingClientRect();
+					const sectionTop = rect.top;
+					
+					// If section top is at or above the offset line, this is the active one
+					if (sectionTop <= offset) {
+						activeSection = sections[i];
+						break;
+					}
+				}
+			}
+			
+			// If no section found (we're at the very top), use the first section
+			if (!activeSection) {
+				activeSection = sections[0];
+			}
+			
+			// Highlight active section
+			if (activeSection) {
+				const menuItem = document.getElementById(activeSection.menuId);
+				if (menuItem) {
+					menuItem.style.borderTop = 'solid white';
+					menuItem.style.borderBottom = 'solid white';
+				}
+			}
+		}
+		
+		// Update on scroll with throttling for better performance
+		let ticking = false;
+		window.addEventListener('scroll', function() {
+			if (!ticking) {
+				window.requestAnimationFrame(function() {
+					updateActiveMenu();
+					ticking = false;
+				});
+				ticking = true;
+			}
+		});
+		
+		// Initial update
+		updateActiveMenu();
+	});
 </script>
 
 </body>
