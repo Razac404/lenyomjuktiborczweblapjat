@@ -1723,6 +1723,7 @@
 		let intervalId = null;
 		let szunetel = false;
 		let hoverIndex = null;
+		let hoverEnabled = true;
 		
 		const nyelv = document.querySelector('.nyelv-valaszto');
 		const menupontElements = document.querySelectorAll('.menupont');
@@ -1762,6 +1763,7 @@
 			const fo_oldal = document.getElementById('fo_oldal');
 			if (fomenu) {
 				if (window.scrollY === 0) { // Change after 100px scroll
+					hoverEnabled = false;
 					if (intervalId) {
 						clearInterval(intervalId);
 						intervalId = null;
@@ -1777,6 +1779,7 @@
 					menupontElements.forEach(element => {element.style.color = 'white';});
 				} 
 				else {
+					hoverEnabled = true;
 					if (!intervalId && !szunetel) { 
 						inditValtakozas();
 						initHover();
@@ -1830,6 +1833,7 @@
 			const menuElem = document.getElementById(p.menu);
 
 			menuElem.addEventListener("mouseenter", () => {
+			if (!hoverEnabled) return;
 			szunetel = true;
 			hoverIndex = index;
 			resetAll();
@@ -1840,6 +1844,7 @@
 			});
 
 			menuElem.addEventListener("mouseleave", () => {
+				if (!hoverEnabled) return;
 				szunetel = false;
 
 				aktualisIndex = (hoverIndex + 1) % parok.length;
