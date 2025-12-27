@@ -1712,6 +1712,96 @@
 
 		  // FIX fejléc magasság (fomenu 120 + almenu 100)
 		  
+		window.addEventListener('load', function() {
+		const sections = [
+			{ id: 'tura_old', menuId: 'almenu1' },
+			{ id: 'multiplatform_old', menuId: 'almenu2' },
+			{ id: 'vendegkommunikacio_old', menuId: 'almenu3' },
+			{ id: 'aroptimalizálás_old', menuId: 'almenu4' },
+			{ id: 'jogszabalyMegfel_old', menuId: 'almenu5' },
+			{ id: 'uzenet_iras', menuId: 'almenu7' },
+			{ id: 'kapcsolat', menuId: 'almenu8' }
+		];
+		
+		const fomenu = document.getElementById('fomenu');
+		const almenu = document.getElementById('almenu');
+		const offset = (fomenu ? fomenu.offsetHeight : 120) + (almenu ? almenu.offsetHeight : 100);
+		
+		function updateActiveMenu() {
+			// Remove borders from all
+			sections.forEach(s => {
+				const menuItem = document.getElementById(s.menuId);
+				if (menuItem) {
+					menuItem.style.borderTop = 'none';
+					menuItem.style.borderBottom = 'none';
+				}
+			});
+			
+			// Find the section closest to the top (accounting for offset)
+			let activeSection = null;
+			let minDistance = Infinity;
+			
+			sections.forEach(s => {
+				const section = document.getElementById(s.id);
+				if (section) {
+					const rect = section.getBoundingClientRect();
+					const sectionTop = rect.top;
+					
+					// Check if section is in the viewport area we care about
+					if (sectionTop <= offset + 100 && sectionTop >= -rect.height) {
+						const distance = Math.abs(sectionTop - offset);
+						if (distance < minDistance) {
+							minDistance = distance;
+							activeSection = s;
+						}
+					}
+				}
+			});
+			
+			// Highlight active section
+			if (activeSection) {
+				const menuItem = document.getElementById(activeSection.menuId);
+				if (menuItem) {
+					menuItem.style.borderTop = 'solid white';
+					menuItem.style.borderBottom = 'solid white';
+				}
+			}
+		}
+		
+		// Update on scroll
+		window.addEventListener('scroll', updateActiveMenu);
+		
+		// Also use IntersectionObserver for better performance
+		const observerOptions = {
+			root: null,
+			rootMargin: `-${offset}px 0px -50% 0px`,
+			threshold: [0, 0.1, 0.5, 1]
+		};
+		
+		const observer = new IntersectionObserver(function(entries) {
+			updateActiveMenu();
+		}, observerOptions);
+		
+		sections.forEach(s => {
+			const section = document.getElementById(s.id);
+			if (section) {
+				observer.observe(section);
+			}
+		});
+		
+		// Initial update
+		updateActiveMenu();
+	});
+
+
+		window.addEventListener('load', function() {
+		  const ta = document.getElementById('uzenet');
+		  if (ta) {
+			ta.value = 'monitor height: ' + window.innerHeight + 'px' + '  |  monitor width: ' + window.innerWidth + 'px';
+		  }
+		});
+</script>
+		  
 	
 </script>
 
