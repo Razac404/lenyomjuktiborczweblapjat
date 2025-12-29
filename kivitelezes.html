@@ -370,7 +370,7 @@
 		
 		#uzenet_iras{
 			display:grid;
-			grid-template-columns: 10% 80% 10%;
+			grid-template-columns: 30% 40% 30%;
 			grid-template-rows: 10% 85% 5%;
 			/*background-image: url('greenKapcsolat3.jpg');*/
 			background-size:cover;
@@ -378,7 +378,7 @@
 			color: white;
 			padding-top: 2%;
 		}
-		
+				
 		#kapcsolat_felirat{
 			text-align:center;
 			grid-column: 2;
@@ -470,6 +470,18 @@
 			background-color: #003380;
 		}
 		
+		#diszites_uzenet_iras{
+			grid-column: 3;
+			grid-row: 1/4;
+			display:flex;
+			justify-content: center;
+			align-items:center;
+		}
+		
+		#diszites_uzenet_iras img{
+			height: 50%;
+			width: auto;
+		}
 		
 		#kapcsolat{
 			background-image: url('zold2.png');
@@ -502,6 +514,7 @@
 			text-align: center;
 			align-self:center;
 			background: rgba(255,255,255,0.12);
+			backdrop-filter: blur(6px);
 			width: fit-content;
 			border-radius: 25px;
 			height:15%;
@@ -1489,6 +1502,11 @@
 				<button type="submit">Üzenet küldése</button>
 			</form>
 		</div>
+		
+		<div id="diszites_uzenet_iras">
+			<img src="gepeloEmberke.png" alt="">
+		</div>
+		
 	</div>
 	
 	<div id="kapcsolat" class="oldal"> 
