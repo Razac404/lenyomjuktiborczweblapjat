@@ -832,14 +832,620 @@
 			border-radius: 45%;
 		}
 		
-		
-		@media screen and (min-height: 700px) and (min-width: 1024px){
+
+		@media screen and (min-height: 500px) and (max-width: 750px){
 			.oldal{				
-				height: calc(95vh - 170px) !important;				
+				height: calc(95vh - 115px) !important;				
 			}
 			
 			#oldaltoltes {
-				height: 170px;
+				height: 115px;
+			}
+		
+			#toltes_fomenu1{
+				width: 8px;
+			}
+			
+			#toltes_fomenu2{
+				width: 8px;
+			}
+			
+			#logo img {
+				max-height: 80px;
+				
+			}
+			
+			#fomenu{
+				height: 115px;
+				width: 100%;
+				display: grid;
+				grid-template-columns: 20% 20% 20% 20% 20%;
+				grid-template-rows: 55% 45%;
+				gap: 0px;
+			}
+			
+			#logo{
+				justify-self: right;
+				align-self: center; 
+				grid-column: 1;
+				grid-row: 1;
+				margin-right: 5px;
+			}
+			
+			#cegnev{
+				grid-column: 2 / 4;
+				grid-row: 1;
+				font-size: 2rem; /*3rem*/
+				font-stretch: 115%;/*150%*/
+
+			}
+			/*
+			#toltes_fomenu1{
+				grid-column: 3;
+				grid-row: 1;
+			}
+			*/
+			#ign_kivitelezes{
+				grid-column: 4;
+				grid-row: 1;
+			}
+			
+			.nyelv-valaszto{
+				grid-column: 5;
+				grid-row: 1;
+				justify-self: center; /* Vízszintes középre */
+				align-self: center; 
+			}
+			
+			
+			#fo_oldal{
+				grid-column: 1;
+				grid-row: 2;
+			}
+			
+			#ign_kezeles{
+				grid-column: 2;
+				grid-row: 2;
+			}
+			
+			#ign_okosotthon{
+				grid-column: 3;
+				grid-row: 2;
+			}
+			
+			#ign_takaritas{
+				grid-column: 4;
+				grid-row: 2;
+			}
+			
+			#ign_tanacsadas{
+				grid-column: 5;
+				grid-row: 2;
+			}
+			
+			
+			.menupont{
+				height: 45px; 
+				width: auto; 
+				max-width: 100%;
+				font-size: 0.9rem;/*1.4rem*/
+				
+			}
+			
+			#almenu{
+				display: none;
+			}
+			
+			.al_menupont{
+				height: 37px; /*55px*/
+				width: content-fit;
+				font-size: 0.6rem;/*1.2rem*/
+			}
+			
+			h1{
+				font-size: 1.6rem;
+			}
+			
+			.feher1, .feher, .szines{
+				grid-template-columns: 100%;
+				grid-template-rows: 20% auto;
+				
+			}
+			
+			.feher1:not(#uzenet_iras):not(#kapcsolat) .felirat_resz1,
+			.feher:not(#uzenet_iras):not(#kapcsolat) .felirat_resz,
+			.szines:not(#uzenet_iras):not(#kapcsolat) .felirat_resz,
+			.szines:not(#uzenet_iras):not(#kapcsolat) .felirat_resz1 {
+				grid-column: 1;
+				grid-row: 1;
+				width: 100%;
+				
+			}
+			
+			.feher1:not(#uzenet_iras):not(#kapcsolat) .tobbi_resz1,
+			.feher:not(#uzenet_iras):not(#kapcsolat) .tobbi_resz,
+			.szines:not(#uzenet_iras):not(#kapcsolat) .tobbi_resz,
+			.szines:not(#uzenet_iras):not(#kapcsolat) .tobbi_resz1 {
+				grid-column: 1;
+				grid-row: 2;
+				width: 100%;
+			}
+			
+			
+			
+			.felirat_resz1{
+				height: auto;
+				width:fit-content;
+				margin: 0 auto;
+				padding-top: 0%;
+				display: flex;
+				justify-content: center;
+				
+			}
+			
+			.felirat_resz{
+				height: auto;
+				width:fit-content;
+				margin: 0 auto;
+				padding-top: 5%;
+				display: flex;
+				justify-content: center;
+				
+				
+			}
+			
+			.tobbi_resz1{
+				width: 85%;
+				font-family: Arial;
+				padding: 0% 5% 5% 5%;
+				align-items:center;
+				
+			}
+			
+			.tobbi_resz{
+				width: 85%;
+				padding: 0% 5% 5% 5%;
+				align-items:center;
+				
+			}
+			
+			.szinesfelirat_cl{
+				border-top: none;
+				padding-top: 7.5%;
+			}
+			
+			
+			.feherfelirat_cl{
+				border-top: none;
+				padding-top: 7.5%;
+			}
+			
+			.tartalom_feherHatter{
+				padding-top: 5%;
+				border-top: none;
+				font-size: 0.85rem;
+				
+			}
+			
+			.tartalom_szinesHatter{
+				padding-top: 5%;
+				border-top: none;
+				font-size:0.85rem;
+			}
+			
+			#leiras_rolunk_old{
+				padding-top: 0%;
+			}
+			
+			.kepek{
+				height: 55%;
+				width: 90%;
+				border-radius: 20px;
+				margin: 7% auto 0 auto;
+				padding: 5px;
+				background-size: cover; 
+				background-position: center;
+				background-repeat: no-repeat;
+				
+			}
+			
+			#kapcsolat_felirat{
+				font-size: 1.2rem;
+				line-height: 1.3;
+			}
+			
+			#kapcsolat_felirat{
+				font-size: 1.2rem;
+				line-height: 1.4;
+				display: flex;
+				flex-direction: column;
+				align-items: center;  /* ✅ Ez középre igazítja a span-eket */
+			}
+			
+			#kapcsolat_felirat span {
+				display: block;  /* ✅ Mindkét span block lesz */
+				text-align: center;
+			}
+	
+			#uzenet_iras{
+				grid-template-columns: 30% 40% 30%;
+				grid-template-rows: 10% 85% 5%;
+				padding-top: 2%;
+			}
+			
+			#uzenet_form {
+				gap: 8px; /*15px*/
+				margin-top: 40px;
+				max-width: 470px;
+				
+			}
+			
+			.form-group label {
+				margin-bottom: 5px;
+				font-weight: 800;
+				padding: 6px;
+				font-size: 0.8rem;/*1.1rem*/
+			}		
+			
+			.form-group input[type="text"],
+			.form-group input[type="email"],
+			.form-group input[type="tel"],
+			.form-group textarea {
+				padding: 5.5px 7px;
+				font-size: 0.7rem;/*1rem*/
+			}
+			
+			.form-group textarea {
+				min-height: 105px;
+				resize: vertical;
+			}
+		
+			#uzenet_form button {			
+				font-size: 0.8rem;/*1.1rem*/
+				margin-top: 0px; /*10px*/
+			}
+			
+			#gyorsmenu{
+				margin-left: -9%;
+			}
+		
+			.gyorsmenupont{
+				width: 79%;
+			}
+			
+			.cegnevek_gyors{
+				font-size: 0.8rem;
+				
+			}
+			
+			.szolgaltatasok_gyors{
+				font-size: 1.2rem;
+			}
+			
+			#telefon_email{    
+				top: -10%; 
+				height: 15%;
+				font-size: 1.1rem;
+			}
+			
+			
+			#gmap{
+				height:35%;
+				width: 100%;
+				padding: 0px 9%;
+			}
+		}
+		
+		@media screen and (min-height: 700px) and (min-width: 750px){
+			.oldal{				
+				height: calc(95vh - 115px) !important;				
+			}
+			
+			#oldaltoltes {
+				height: 115px;
+			}
+		
+			#toltes_fomenu1{
+				width: 8px;
+			}
+			
+			#toltes_fomenu2{
+				width: 8px;
+			}
+			
+			#logo img {
+				max-height: 80px;
+				
+			}
+			
+			#fomenu{
+				height: 115px;
+				width: 100%;
+				display: grid;
+				grid-template-columns: 20% 20% 20% 20% 20%;
+				grid-template-rows: 55% 45%;
+				gap: 0px;
+			}
+			
+			#logo{
+				justify-self: right;
+				align-self: center; 
+				grid-column: 1;
+				grid-row: 1;
+				margin-right: 5px;
+			}
+			
+			#cegnev{
+				grid-column: 2 / 4;
+				grid-row: 1;
+				font-size: 2rem; /*3rem*/
+				font-stretch: 115%;/*150%*/
+
+			}
+			/*
+			#toltes_fomenu1{
+				grid-column: 3;
+				grid-row: 1;
+			}
+			*/
+			#ign_kivitelezes{
+				grid-column: 4;
+				grid-row: 1;
+			}
+			
+			.nyelv-valaszto{
+				grid-column: 5;
+				grid-row: 1;
+				justify-self: center; /* Vízszintes középre */
+				align-self: center; 
+			}
+			
+			
+			#fo_oldal{
+				grid-column: 1;
+				grid-row: 2;
+			}
+			
+			#ign_kezeles{
+				grid-column: 2;
+				grid-row: 2;
+			}
+			
+			#ign_okosotthon{
+				grid-column: 3;
+				grid-row: 2;
+			}
+			
+			#ign_takaritas{
+				grid-column: 4;
+				grid-row: 2;
+			}
+			
+			#ign_tanacsadas{
+				grid-column: 5;
+				grid-row: 2;
+			}
+			
+			
+			.menupont{
+				height: 45px; 
+				width: auto; 
+				max-width: 100%;
+				font-size: 0.9rem;/*1.4rem*/
+				
+			}
+			
+			#almenu{
+				display: none;
+			}
+			
+			.al_menupont{
+				height: 37px; /*55px*/
+				width: content-fit;
+				font-size: 0.6rem;/*1.2rem*/
+			}
+			
+			h1{
+				font-size: 1.6rem;
+			}
+			
+			.feher1, .feher, .szines{
+				grid-template-columns: 100%;
+				grid-template-rows: 20% auto;
+				
+			}
+			
+			.feher1:not(#uzenet_iras):not(#kapcsolat) .felirat_resz1,
+			.feher:not(#uzenet_iras):not(#kapcsolat) .felirat_resz,
+			.szines:not(#uzenet_iras):not(#kapcsolat) .felirat_resz,
+			.szines:not(#uzenet_iras):not(#kapcsolat) .felirat_resz1 {
+				grid-column: 1;
+				grid-row: 1;
+				width: 100%;
+				
+			}
+			
+			.feher1:not(#uzenet_iras):not(#kapcsolat) .tobbi_resz1,
+			.feher:not(#uzenet_iras):not(#kapcsolat) .tobbi_resz,
+			.szines:not(#uzenet_iras):not(#kapcsolat) .tobbi_resz,
+			.szines:not(#uzenet_iras):not(#kapcsolat) .tobbi_resz1 {
+				grid-column: 1;
+				grid-row: 2;
+				width: 100%;
+			}
+			
+			
+			
+			.felirat_resz1{
+				height: auto;
+				width:fit-content;
+				margin: 0 auto;
+				padding-top: 0%;
+				display: flex;
+				justify-content: center;
+				
+			}
+			
+			.felirat_resz{
+				height: auto;
+				width:fit-content;
+				margin: 0 auto;
+				padding-top: 5%;
+				display: flex;
+				justify-content: center;
+				
+				
+			}
+			
+			.tobbi_resz1{
+				width: 85%;
+				font-family: Arial;
+				padding: 0% 5% 5% 5%;
+				align-items:center;
+				
+			}
+			
+			.tobbi_resz{
+				width: 85%;
+				padding: 0% 5% 5% 5%;
+				align-items:center;
+				
+			}
+			
+			.szinesfelirat_cl{
+				border-top: none;
+				padding-top: 5%;
+			}
+			
+			
+			.feherfelirat_cl{
+				border-top: none;
+				padding-top: 5%;
+			}
+			
+			.tartalom_feherHatter{
+				padding-top: 5%;
+				border-top: none;
+				font-size: 0.85rem;
+				
+			}
+			
+			.tartalom_szinesHatter{
+				padding-top: 5%;
+				border-top: none;
+				font-size:0.85rem;
+			}
+			
+			#leiras_rolunk_old{
+				padding-top: 0%;
+			}
+			
+			.kepek{
+				height: 65%;
+				width: 75%;
+				border-radius: 20px;
+				margin: 5% auto 0 auto;
+				padding: 5px;
+				background-size: cover; 
+				background-position: center;
+				background-repeat: no-repeat;
+				
+			}
+			
+			#kapcsolat_felirat{
+				font-size: 1.2rem;
+				line-height: 1.3;
+			}
+			
+			#kapcsolat_felirat{
+				font-size: 1.2rem;
+				line-height: 1.4;
+				display: flex;
+				flex-direction: column;
+				align-items: center;  /* ✅ Ez középre igazítja a span-eket */
+			}
+			
+			#kapcsolat_felirat span {
+				display: block;  /* ✅ Mindkét span block lesz */
+				text-align: center;
+			}
+	
+			#uzenet_iras{
+				grid-template-columns: 30% 40% 30%;
+				grid-template-rows: 10% 85% 5%;
+				padding-top: 2%;
+			}
+			
+			#uzenet_form {
+				gap: 8px; /*15px*/
+				margin-top: 40px;
+				max-width: 470px;
+				
+			}
+			
+			.form-group label {
+				margin-bottom: 5px;
+				font-weight: 800;
+				padding: 6px;
+				font-size: 0.8rem;/*1.1rem*/
+			}		
+			
+			.form-group input[type="text"],
+			.form-group input[type="email"],
+			.form-group input[type="tel"],
+			.form-group textarea {
+				padding: 5.5px 7px;
+				font-size: 0.7rem;/*1rem*/
+			}
+			
+			.form-group textarea {
+				min-height: 105px;
+				resize: vertical;
+			}
+		
+			#uzenet_form button {			
+				font-size: 0.8rem;/*1.1rem*/
+				margin-top: 0px; /*10px*/
+			}
+			
+			#gyorsmenu{
+				margin-left: -9%;
+			}
+		
+			.gyorsmenupont{
+				width: 79%;
+			}
+			
+			.cegnevek_gyors{
+				font-size: 0.8rem;
+				
+			}
+			
+			.szolgaltatasok_gyors{
+				font-size: 1.2rem;
+			}
+			
+			#telefon_email{    
+				top: -10%; 
+				height: 15%;
+				font-size: 1.1rem;
+			}
+			
+			
+			#gmap{
+				height:35%;
+				width: 100%;
+				padding: 0px 9%;
+			}
+		}
+		
+		@media screen and (min-height: 700px) and (min-width: 1024px){
+			.oldal{				
+				height: calc(95vh - 140px) !important;				
+			}
+			
+			#oldaltoltes {
+				height: 140px;
 			}
 		
 			#toltes_fomenu1{
@@ -855,7 +1461,12 @@
 			}
 			
 			#fomenu{
-				height: 95px;
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				height: 75px;
 				gap: 1px;
 			}
 			
@@ -873,8 +1484,13 @@
 			}
 			
 			#almenu{
-				height: 75px; /*100px*/
-				top: 95px; /*120px*/
+				height: 65px; /*100px*/
+				top: 75px; /*120px*/
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				position: fixed;
 			}
 			
 			.al_menupont{
@@ -942,7 +1558,7 @@
 			
 			#uzenet_form {
 				gap: 8px; /*15px*/
-				margin-top: 45px;
+				margin-top: 30px;
 				max-width: 470px;
 				
 			}
@@ -980,10 +1596,19 @@
 				width: 70%;
 			}
 			
+			.cegnevek_gyors{
+				font-size: 0.9rem;
+				
+			}
+			
+			.szolgaltatasok_gyors{
+				font-size: 1.3rem;
+			}
+			
 			#telefon_email{    
 				top: -10%; 
 				height: 15%;
-				font-size: 1.4rem;
+				font-size: 1.2rem;
 			}
 			
 			#gmap{
@@ -995,11 +1620,11 @@
 		
 		@media screen and (min-height: 700px) and (min-width: 1280px){
 			.oldal{				
-				height: calc(95vh - 170px) !important;				
+				height: calc(95vh - 140px) !important;				
 			}
 			
 			#oldaltoltes {
-				height: 170px;
+				height: 140px;
 			}
 		
 			#toltes_fomenu1{
@@ -1015,7 +1640,7 @@
 			}
 			
 			#fomenu{
-				height: 95px;
+				height: 75px;
 				gap: 5px;
 			}
 			
@@ -1026,15 +1651,16 @@
 			}
 			
 			.menupont{
-				height: 52px; 
+				height: 48px; 
 				width: 120px;
 				font-size: 1.0rem;/*1.4rem*/
 				
 			}
 			
 			#almenu{
-				height: 75px; /*100px*/
-				top: 95px; /*120px*/
+				height: 65px; /*100px*/
+				top: 75px; /*120px*/
+				gap: 5px;
 			}
 			
 			.al_menupont{
@@ -1044,7 +1670,7 @@
 			}
 			
 			h1{
-				font-size: 1.80rem;
+				font-size: 1.70rem;
 			}
 			
 			.tartalom_feherHatter{
@@ -1097,12 +1723,12 @@
 			#uzenet_iras{
 				grid-template-columns: 30% 40% 30%;
 				grid-template-rows: 10% 85% 5%;
-				padding-top: 0.5%;
+				padding-top: 0.1%;
 			}
 			
 			#uzenet_form {
 				gap: 8px; /*15px*/
-				margin-top: 45px;
+				margin-top: 40px;
 				max-width: 470px;
 				
 			}
@@ -1129,11 +1755,11 @@
 		
 			#uzenet_form button {			
 				font-size: 0.9rem;/*1.1rem*/
-				margin-top: 0px; /*10px*/
+				margin-top: -0px; /*10px*/
 			}
 			
 			.gyorsmenupont{
-				width: 50%;
+				width: 55%;
 			}
 			
 			#telefon_email{    
@@ -1151,11 +1777,11 @@
 		
 		@media screen and (min-height: 700px) and (min-width: 1500px){
 			.oldal{				
-				height: calc(95vh - 170px) !important;				
+				height: calc(95vh - 150px) !important;				
 			}
 			
 			#oldaltoltes {
-				height: 170px;
+				height: 150px;
 			}
 		
 			#toltes_fomenu1{
@@ -1171,7 +1797,7 @@
 			}
 			
 			#fomenu{
-				height: 95px;
+				height: 80px;
 				gap: 10px;
 			}
 			
@@ -1189,14 +1815,17 @@
 			}
 			
 			#almenu{
-				height: 75px; /*100px*/
-				top: 95px; /*120px*/
+				height: 70px; /*100px*/
+				top: 80px; /*120px*/
+				gap: 12px;
+				
 			}
 			
 			.al_menupont{
 				height: 39px; /*55px*/
 				width: content-fit;
 				font-size: 0.7rem;/*1.2rem*/
+				min-width: 90px;
 			}
 			
 			h1{
@@ -1253,12 +1882,12 @@
 			#uzenet_iras{
 				grid-template-columns: 30% 40% 30%;
 				grid-template-rows: 10% 85% 5%;
-				padding-top: 0.5%;
+				padding-top: 0.1%;
 			}
 			
 			#uzenet_form {
 				gap: 7px; /*15px*/
-				margin-top: 45px;
+				margin-top: 40px;
 				max-width: 500px;
 				
 			}
@@ -1288,6 +1917,11 @@
 				margin-top: 0px; /*10px*/
 			}
 			
+			#gyorsmenu{
+				margin-left: -15%;
+				
+			}
+		
 			.gyorsmenupont{
 				width: 50%;
 			}
@@ -1295,7 +1929,7 @@
 			#telefon_email{    
 				top: -10%; 
 				height:15%;
-				font-size: 1.4rem;
+				font-size: 1.3rem;
 			}
 			
 			#gmap{
@@ -1307,11 +1941,11 @@
 		
 		@media screen and (min-height: 700px) and (min-width: 1780px){
 			.oldal{				
-				height: calc(95vh - 180px) !important;				
+				height: calc(96vh - 151px) !important;				
 			}
 			
 			#oldaltoltes {
-				height: 180px;
+				height: 151px;
 			}
 		
 			#toltes_fomenu1{
@@ -1327,7 +1961,7 @@
 			}
 			
 			#fomenu{
-				height: 100px;
+				height: 83px;
 			}
 			
 			#cegnev{
@@ -1344,8 +1978,8 @@
 			}
 			
 			#almenu{
-				height: 80px; /*100px*/
-				top: 100px; /*120px*/
+				height: 68px; /*100px*/
+				top: 83px; /*120px*/
 			}
 			
 			.al_menupont{
@@ -1355,7 +1989,7 @@
 			}
 			
 			h1{
-				font-size: 2.0rem;
+				font-size: 1.9rem;
 			}
 			
 			.tartalom_feherHatter{
@@ -1413,7 +2047,7 @@
 			
 			#uzenet_form {
 				gap: 8px; /*15px*/
-				margin-top: 45px;
+				margin-top: 40px;
 				max-width: 500px;
 				
 			}
@@ -2091,6 +2725,7 @@
 		<div id="cegnev">ST-Management</div>
 		<div id="toltes_fomenu1"> </div>
 		<div id="fo_oldal" class="menupont" ><span style="font-family: Libre Baskerville;">Főoldal</span> </div>	
+		<div id="toltes_fomenu1"> </div>
 		<div id="ign_kezeles" class="menupont">Ingatlan kezelés </div>
 		<div id="ign_kivitelezes" class="menupont" >Kivitelezés </div>
 		<div id="ign_okosotthon" class="menupont" >Okosotthon </div>
